@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 960px;
+    margin: auto;
+    padding: 1em;
+  }
+  header, footer {
+    text-align: center;
+  }
+  nav a {
+    margin: 0 10px;
+  }
+  
