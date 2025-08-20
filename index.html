@@ -154,16 +154,36 @@
     }
   </script>
   
-  <script>
+<script>
+  // Carousel script
   const track = document.getElementById("carouselTrack");
   const slides = track.children.length;
+  const clone = track.innerHTML; 
+  track.innerHTML += clone; // duplicate all slides once for looping
+  
   let index = 0;
+  const totalSlides = track.children.length; // now 24 (12 original + 12 clone)
 
-  setInterval(() => {
-    index = (index + 1) % slides;
-    track.style.transform = `translateX(-${index * 25}%)`; 
-  }, 3000); // change every 3 seconds
-  </script>
+  function moveCarousel() {
+    index++;
+    track.style.transform = `translateX(-${index * 25}%)`; // 25% = 4 visible at once
+
+    // reset after original set ends
+    if (index >= slides) {
+      setTimeout(() => {
+        track.style.transition = "none";
+        index = 0;
+        track.style.transform = `translateX(0)`;
+        // re-enable transition
+        setTimeout(() => {
+          track.style.transition = "transform 0.8s ease";
+        }, 50);
+      }, 800); // wait for the transition to finish
+    }
+  }
+
+  setInterval(moveCarousel, 3000);
+</script>
 
   <button onclick="toggleDebug()" 
           style="position:fixed;bottom:20px;right:20px;z-index:9999;
