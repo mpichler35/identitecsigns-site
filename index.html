@@ -120,14 +120,19 @@
   <p>info@identitecsigns.com | (817) 329-0411 | Southlake, TX</p>
 </section>
 
-  <!-- ================= FOOTER ================= -->
-  <footer class="img-footer-accent"
-    style="background-image: url('path/to/footer_accent.jpg'); background-size: cover;">
-    <!-- IMAGE: footer_accent (1920x400) -->
-    <p>© Identitec Signs | Southlake, TX</p>
-    <p><a href="mailto:info@identitecsigns.com">info@identitecsigns.com</a> | (817) 329-0411</p>
-    <p>Follow us: [LinkedIn] [Meta]</p>
-  </footer>
+ <!-- ================= FOOTER ================= -->
+<footer class="img-footer-accent"
+  style="background-image: url('path/to/footer_accent.jpg'); background-size: cover;">
+  <!-- IMAGE: footer_accent (1920x400) - Footer accent background -->
+  <p>© <span id="year"></span> Identitec Signs | Southlake, TX</p>
+  <p><a href="mailto:info@identitecsigns.com">info@identitecsigns.com</a> | (817) 329-0411</p>
+  <p>Follow us: [LinkedIn] [Meta]</p>
+</footer>
+
+<script>
+  // Insert current year into footer
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
   <!-- ================= SCRIPTS ================= -->
   <script>
