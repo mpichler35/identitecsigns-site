@@ -228,3 +228,167 @@ footer a:hover {
     margin-top: 10px;
   }
 }
+
+/* ======== IMAGE PLACEHOLDER CLASSES (Scaffold) ======== */
+
+/* Hero */
+.img-hero-main { /* hero_main (1920x1080) */ }
+
+/* About/Services */
+.img-about-services { /* about_services (1200x800) */ }
+
+/* Audience Split */
+.img-audience-developers { /* audience_developers (800x600) */ }
+.img-audience-hoas { /* audience_hoas (800x600) */ }
+
+/* Carousel 12 images */
+.img-carousel-01 { /* carousel_01 (1200x800) */ }
+.img-carousel-02 { /* carousel_02 (1200x800) */ }
+.img-carousel-03 { /* carousel_03 (1200x800) */ }
+.img-carousel-04 { /* carousel_04 (1200x800) */ }
+.img-carousel-05 { /* carousel_05 (1200x800) */ }
+.img-carousel-06 { /* carousel_06 (1200x800) */ }
+.img-carousel-07 { /* carousel_07 (1200x800) */ }
+.img-carousel-08 { /* carousel_08 (1200x800) */ }
+.img-carousel-09 { /* carousel_09 (1200x800) */ }
+.img-carousel-10 { /* carousel_10 (1200x800) */ }
+.img-carousel-11 { /* carousel_11 (1200x800) */ }
+.img-carousel-12 { /* carousel_12 (1200x800) */ }
+
+/* Contact Background */
+.img-contact-bg { /* contact_bg (1600x900) */ }
+
+/* Footer Accent */
+.img-footer-accent { /* footer_accent (1920x400) */ }
+
+/* ======== DEBUG STYLES FOR IMAGE PLACEHOLDERS ======== */
+
+/* Hero Background */
+.img-hero-main {
+  background-color: #f5f5f5 !important; /* fallback background */
+  border: 4px dashed red; /* outlines hero container */
+  position: relative;
+}
+.img-hero-main::after {
+  content: "hero_main (1920x1080)";
+  position: absolute;
+  top: 10px; left: 10px;
+  background: rgba(255,0,0,0.7);
+  color: white;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  font-family: var(--font-header);
+}
+
+/* About / Services */
+.img-about-services {
+  border: 4px dashed red;
+  background: #eee;
+  position: relative;
+}
+.img-about-services::after {
+  content: "about_services (1200x800)";
+  position: absolute;
+  bottom: 10px; left: 10px;
+  background: rgba(255,0,0,0.7);
+  color: white;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+}
+
+/* Audience Split */
+.img-audience-developers,
+.img-audience-hoas {
+  border: 4px dashed red;
+  background: #eee;
+  position: relative;
+}
+.img-audience-developers::after {
+  content: "audience_developers (800x600)";
+  position: absolute;
+  bottom: 10px; left: 10px;
+  background: rgba(255,0,0,0.7);
+  color: white;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+}
+.img-audience-hoas::after {
+  content: "audience_hoas (800x600)";
+  position: absolute;
+  bottom: 10px; left: 10px;
+  background: rgba(255,0,0,0.7);
+  color: white;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+}
+
+/* Carousel (12 images) */
+.img-carousel-01,
+.img-carousel-02,
+.img-carousel-03,
+.img-carousel-04,
+.img-carousel-05,
+.img-carousel-06,
+.img-carousel-07,
+.img-carousel-08,
+.img-carousel-09,
+.img-carousel-10,
+.img-carousel-11,
+.img-carousel-12 {
+  border: 4px dashed red;
+  background: #fafafa;
+  position: relative;
+}
+.img-carousel-01::after { content: "carousel_01 (1200x800)"; }
+.img-carousel-02::after { content: "carousel_02 (1200x800)"; }
+.img-carousel-03::after { content: "carousel_03 (1200x800)"; }
+.img-carousel-04::after { content: "carousel_04 (1200x800)"; }
+.img-carousel-05::after { content: "carousel_05 (1200x800)"; }
+.img-carousel-06::after { content: "carousel_06 (1200x800)"; }
+.img-carousel-07::after { content: "carousel_07 (1200x800)"; }
+.img-carousel-08::after { content: "carousel_08 (1200x800)"; }
+.img-carousel-09::after { content: "carousel_09 (1200x800)"; }
+.img-carousel-10::after { content: "carousel_10 (1200x800)"; }
+.img-carousel-11::after { content: "carousel_11 (1200x800)"; }
+.img-carousel-12::after { content: "carousel_12 (1200x800)"; }
+
+.carousel img::after {
+  display: block;
+  text-align: center;
+  font-size: 0.7rem;
+  color: red;
+  font-family: var(--font-header);
+  margin-top: 4px;
+}
+
+/* Contact Background */
+.img-contact-bg {
+  background-color: #f5f5f5 !important;
+  border: 4px dashed red;
+  position: relative;
+}
+.img-contact-bg::after {
+  content: "contact_bg (1600x900)";
+  position: absolute;
+  top: 10px; left: 10px;
+  background: rgba(255,0,0,0.7);
+  color: white;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+}
+
+/* Footer Accent */
+.img-footer-accent {
+  background-color: #f5f5f5 !important;
+  border-top: 4px dashed red;
+  position: relative;
+}
+.img-footer-accent::after {
+  content: "footer_accent (1920x400)";
+  position: absolute;
+  top: 10px; left: 10px;
+  background: rgba(255,0,0,0.7);
+  color: white;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+}
