@@ -99,24 +99,26 @@
     <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">See More Projects</button>
   </section>
 
-  <!-- ================= CONTACT ================= -->
-  <section id="contact" class="img-contact-bg"
-    style="background-image: url('path/to/contact_bg.jpg'); background-size: cover; background-position: center;">
-    <!-- IMAGE: contact_bg (1600x900) -->
-    <h2>Let’s bring pride and value to your community.</h2>
-    <form>
-      <input type="text" placeholder="Name" required />
-      <input type="email" placeholder="Email" required />
-      <select>
-        <option value="">I am a...</option>
-        <option value="developer">Developer</option>
-        <option value="hoa">HOA Representative</option>
-      </select>
-      <textarea placeholder="Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-    <p>info@identitecsigns.com | (817) 329-0411 | Southlake, TX</p>
-  </section>
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="img-contact-bg"
+  style="background-image: url('path/to/contact_bg.jpg'); background-size: cover; background-position: center;">
+  <!-- IMAGE: contact_bg (1600x900) - Contact section background -->
+  <h2>Let’s bring pride and value to your community.</h2>
+  
+  <form action="https://formspree.io/f/xkgzlkyk" method="POST">
+    <input type="text" name="name" placeholder="Name" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <select name="role" required>
+      <option value="">I am a...</option>
+      <option value="developer">Developer</option>
+      <option value="hoa">HOA Representative</option>
+    </select>
+    <textarea name="message" placeholder="Message" required></textarea>
+    <button type="submit" class="btn">Send</button>
+  </form>
+
+  <p>info@identitecsigns.com | (817) 329-0411 | Southlake, TX</p>
+</section>
 
   <!-- ================= FOOTER ================= -->
   <footer class="img-footer-accent"
