@@ -208,7 +208,7 @@ header .contact-top button:hover {
 .split > div {
   flex: 1 1 45%;           /* each side takes ~half */
   min-width: 280px;        /* prevents collapsing too small */
-  text-align: center;
+  text-align: left;
 }
 
 .split h3 {
