@@ -33,6 +33,27 @@ body {
   background: white;
 }
 
+/* ======== Reusable Button Style ======== */
+.btn {
+  display: inline-block;
+  background: var(--bronze);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-header);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--deep-green);
+}
+
 /* ======== Header ======== */
 header {
   position: fixed;
@@ -44,6 +65,7 @@ header {
   align-items: center;
   padding: 12px 40px;
   z-index: 1000;
+  flex-wrap: wrap;
 }
 
 header .logo {
@@ -70,24 +92,10 @@ header .contact-top {
   font-family: var(--font-header);
 }
 
-header button {
-  margin-left: 10px;
-  background: var(--bronze);
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: var(--font-header);
-}
-
-header button:hover {
-  background: var(--deep-green);
-}
-
-/* ======== Hero ======== */
+/* ======== Hero (updated) ======== */
 .hero {
-  height: 100vh;
+  padding: 100px 20px;  /* breathing space */
+  height: auto;         /* natural height */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -107,21 +115,6 @@ header button:hover {
 .hero p {
   font-size: 1.3rem;
   margin-bottom: 20px;
-}
-
-.hero button {
-  background: var(--bronze);
-  border: none;
-  padding: 12px 28px;
-  color: white;
-  font-size: 1.1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: var(--font-header);
-}
-
-.hero button:hover {
-  background: var(--deep-green);
 }
 
 /* ======== Sections ======== */
@@ -189,17 +182,7 @@ h2, h3 {
 }
 
 #contact button {
-  background: var(--bronze);
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 4px;
-  font-family: var(--font-header);
-  cursor: pointer;
-}
-
-#contact button:hover {
-  background: var(--deep-green);
+  width: 100%;
 }
 
 /* ======== Footer ======== */
@@ -240,38 +223,18 @@ footer a:hover {
   }
 }
 
-/* ======== IMAGE PLACEHOLDER CLASSES (Scaffold) ======== */
-/* Hero */
+/* ======== IMAGE PLACEHOLDER CLASSES ======== */
 .img-hero-main {}
-
-/* About/Services */
 .img-about-services {}
-
-/* Audience Split */
 .img-audience-developers {}
 .img-audience-hoas {}
-
-/* Carousel 12 images */
-.img-carousel-01 {}
-.img-carousel-02 {}
-.img-carousel-03 {}
-.img-carousel-04 {}
-.img-carousel-05 {}
-.img-carousel-06 {}
-.img-carousel-07 {}
-.img-carousel-08 {}
-.img-carousel-09 {}
-.img-carousel-10 {}
-.img-carousel-11 {}
-.img-carousel-12 {}
-
-/* Contact Background */
+.img-carousel-01 {} .img-carousel-02 {} .img-carousel-03 {} .img-carousel-04 {}
+.img-carousel-05 {} .img-carousel-06 {} .img-carousel-07 {} .img-carousel-08 {}
+.img-carousel-09 {} .img-carousel-10 {} .img-carousel-11 {} .img-carousel-12 {}
 .img-contact-bg {}
-
-/* Footer Accent */
 .img-footer-accent {}
 
-/* ======== DEBUG MODE (toggle via <body class="debug">) ======== */
+/* ======== DEBUG MODE ======== */
 body.debug .img-hero-main,
 body.debug .img-about-services,
 body.debug .img-audience-developers,
@@ -293,50 +256,4 @@ body.debug .img-footer-accent {
   border: 4px dashed red !important;
   background-color: #f5f5f5 !important;
   position: relative;
-}
-
-body.debug .img-hero-main::after    { content: "hero_main (1920x1080)"; }
-body.debug .img-about-services::after { content: "about_services (1200x800)"; }
-body.debug .img-audience-developers::after { content: "audience_developers (800x600)"; }
-body.debug .img-audience-hoas::after { content: "audience_hoas (800x600)"; }
-body.debug .img-carousel-01::after { content: "carousel_01 (1200x800)"; }
-body.debug .img-carousel-02::after { content: "carousel_02 (1200x800)"; }
-body.debug .img-carousel-03::after { content: "carousel_03 (1200x800)"; }
-body.debug .img-carousel-04::after { content: "carousel_04 (1200x800)"; }
-body.debug .img-carousel-05::after { content: "carousel_05 (1200x800)"; }
-body.debug .img-carousel-06::after { content: "carousel_06 (1200x800)"; }
-body.debug .img-carousel-07::after { content: "carousel_07 (1200x800)"; }
-body.debug .img-carousel-08::after { content: "carousel_08 (1200x800)"; }
-body.debug .img-carousel-09::after { content: "carousel_09 (1200x800)"; }
-body.debug .img-carousel-10::after { content: "carousel_10 (1200x800)"; }
-body.debug .img-carousel-11::after { content: "carousel_11 (1200x800)"; }
-body.debug .img-carousel-12::after { content: "carousel_12 (1200x800)"; }
-body.debug .img-contact-bg::after  { content: "contact_bg (1600x900)"; }
-body.debug .img-footer-accent::after { content: "footer_accent (1920x400)"; }
-
-body.debug .img-hero-main::after,
-body.debug .img-about-services::after,
-body.debug .img-audience-developers::after,
-body.debug .img-audience-hoas::after,
-body.debug .img-carousel-01::after,
-body.debug .img-carousel-02::after,
-body.debug .img-carousel-03::after,
-body.debug .img-carousel-04::after,
-body.debug .img-carousel-05::after,
-body.debug .img-carousel-06::after,
-body.debug .img-carousel-07::after,
-body.debug .img-carousel-08::after,
-body.debug .img-carousel-09::after,
-body.debug .img-carousel-10::after,
-body.debug .img-carousel-11::after,
-body.debug .img-carousel-12::after,
-body.debug .img-contact-bg::after,
-body.debug .img-footer-accent::after {
-  position: absolute;
-  top: 10px; left: 10px;
-  background: rgba(255,0,0,0.7);
-  color: white;
-  padding: 2px 6px;
-  font-size: 0.8rem;
-  font-family: var(--font-header);
 }
