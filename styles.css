@@ -1,4 +1,4 @@
-/* ======== Base Styles ======== */
+/* ======== Root Variables ======== */
 :root {
   --navy: #0A2240;
   --bronze: #8C6239;
@@ -7,6 +7,17 @@
   --charcoal: #4D4D4D;
   --font-header: 'Montserrat', Arial, sans-serif;
   --font-body: 'Merriweather', 'Times New Roman', serif;
+
+  --header-height: 80px; /* fallback for anchor offset */
+}
+
+/* ======== Global Fixes ======== */
+section {
+  scroll-margin-top: var(--header-height);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -230,36 +241,35 @@ footer a:hover {
 }
 
 /* ======== IMAGE PLACEHOLDER CLASSES (Scaffold) ======== */
-
 /* Hero */
-.img-hero-main { /* hero_main (1920x1080) */ }
+.img-hero-main {}
 
 /* About/Services */
-.img-about-services { /* about_services (1200x800) */ }
+.img-about-services {}
 
 /* Audience Split */
-.img-audience-developers { /* audience_developers (800x600) */ }
-.img-audience-hoas { /* audience_hoas (800x600) */ }
+.img-audience-developers {}
+.img-audience-hoas {}
 
 /* Carousel 12 images */
-.img-carousel-01 { /* carousel_01 (1200x800) */ }
-.img-carousel-02 { /* carousel_02 (1200x800) */ }
-.img-carousel-03 { /* carousel_03 (1200x800) */ }
-.img-carousel-04 { /* carousel_04 (1200x800) */ }
-.img-carousel-05 { /* carousel_05 (1200x800) */ }
-.img-carousel-06 { /* carousel_06 (1200x800) */ }
-.img-carousel-07 { /* carousel_07 (1200x800) */ }
-.img-carousel-08 { /* carousel_08 (1200x800) */ }
-.img-carousel-09 { /* carousel_09 (1200x800) */ }
-.img-carousel-10 { /* carousel_10 (1200x800) */ }
-.img-carousel-11 { /* carousel_11 (1200x800) */ }
-.img-carousel-12 { /* carousel_12 (1200x800) */ }
+.img-carousel-01 {}
+.img-carousel-02 {}
+.img-carousel-03 {}
+.img-carousel-04 {}
+.img-carousel-05 {}
+.img-carousel-06 {}
+.img-carousel-07 {}
+.img-carousel-08 {}
+.img-carousel-09 {}
+.img-carousel-10 {}
+.img-carousel-11 {}
+.img-carousel-12 {}
 
 /* Contact Background */
-.img-contact-bg { /* contact_bg (1600x900) */ }
+.img-contact-bg {}
 
 /* Footer Accent */
-.img-footer-accent { /* footer_accent (1920x400) */ }
+.img-footer-accent {}
 
 /* ======== DEBUG MODE (toggle via <body class="debug">) ======== */
 body.debug .img-hero-main,
@@ -285,7 +295,6 @@ body.debug .img-footer-accent {
   position: relative;
 }
 
-/* Labels for each debug item */
 body.debug .img-hero-main::after    { content: "hero_main (1920x1080)"; }
 body.debug .img-about-services::after { content: "about_services (1200x800)"; }
 body.debug .img-audience-developers::after { content: "audience_developers (800x600)"; }
@@ -305,7 +314,6 @@ body.debug .img-carousel-12::after { content: "carousel_12 (1200x800)"; }
 body.debug .img-contact-bg::after  { content: "contact_bg (1600x900)"; }
 body.debug .img-footer-accent::after { content: "footer_accent (1920x400)"; }
 
-/* Label Styling */
 body.debug .img-hero-main::after,
 body.debug .img-about-services::after,
 body.debug .img-audience-developers::after,
