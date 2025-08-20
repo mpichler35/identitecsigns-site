@@ -7,45 +7,60 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Merriweather&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-  
+
+<script>
+  function updateHeaderHeight() {
+    const header = document.querySelector('header');
+    if (header) {
+      document.documentElement.style.setProperty(
+        '--header-height',
+        header.offsetHeight + 'px'
+      );
+    }
+  }
+  window.addEventListener('load', updateHeaderHeight);
+  window.addEventListener('resize', updateHeaderHeight);
+
+  function toggleDebug() {
+    document.body.classList.toggle('debug');
+  }
+</script>
+
 <body class="debug">
 
   <!-- ================= HEADER ================= -->
   <header>
-      <div class="logo">
-        <a href="#hero">Identitec</a>
-      </div>
+    <div class="logo"><a href="#hero">Identitec</a></div>
     <nav>
       <a href="#about">About Us</a>
-      <!--<a href="#services">Services</a>-->
-      <a href="#services">For Developers</a>
-      <a href="#services">For HOAs</a>
-      <a href="#projects">Recent Projects</a>
+      <a href="#services">Services</a>
+      <a href="#developers">For Developers</a>
+      <a href="#hoas">For HOAs</a>
+      <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="contact-top">
       <a href="mailto:info@identitecsigns.com">info@identitecsigns.com</a> | 
-      <a href="tel:18173290411">(817) 329-0411</a>&nbsp;&nbsp;
-      <a href="#contact"><button>Contact Us</button></a> 
+      <a href="tel:18173290411">(817) 329-0411</a>
+      <button>Contact Us</button>
     </div>
   </header>
 
   <!-- ================= HERO ================= -->
-  <section class="hero img-hero-main" id="hero" 
-    style="background-image: url('assets/hero_main.png'); padding: 100px 20px; height: auto; background-size: cover; background-position: center;">
+  <section class="hero img-hero-main" id="hero" style="background-image: url('assets/hero_main.png');">
     <!-- IMAGE: hero_main (1920x1080) - Hero background -->
-    <h1>North Texas Decorative Signage Experts</h1>
-    <p>Serving developers and HOAs since 1997</p>
-    <button onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'});">Get Started Today</button>
+    <div class="hero-content">
+      <h1>North Texas Decorative Signage Experts</h1>
+      <p>Serving developers and HOAs since 1997</p>
+      <button onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'});">Get Started Today</button>
+    </div>
   </section>
 
   <!-- ================= ABOUT / SERVICES ================= -->
   <section id="about" class="split">
     <div>
       <h2>About Us / Our Services</h2>
-      <p>At Identitec, we believe signage is more than a marker—it’s a reflection of community pride and long-term value.
-        Since 1997, our family-owned North Texas business has partnered with developers and HOAs across Texas to design, fabricate,
-        and install decorative signage that elevates neighborhoods into lasting communities.</p>
+      <p>Family-owned, serving North Texas for over 25 years. Authenticity, durability, supplier flexibility.</p>
     </div>
     <div>
       <!-- IMAGE: about_services (1200x800) -->
@@ -57,24 +72,14 @@
   <section id="services" class="split">
     <div id="developers">
       <h3>For Developers</h3>
-      <ul>
-        <li>Fast, reliable proposals</li>
-        <li>Professional coordination with your subs and schedules</li>
-        <li>Right‑fit materials &amp; precision installation</li>
-        <li>Partnership that leads to elevated first impressions</li>
-      </ul>
+      <p>Dependable proposals, surveys, precision installation.</p>
       <!-- IMAGE: audience_developers (800x600) -->
       <img class="img-audience-developers" src="assets/audience_developers.png" alt="Developer blueprint signage">
       <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Request Proposal</button>
     </div>
     <div id="hoas">
       <h3>For HOAs</h3>
-      <ul>
-        <li>Refresh, refurbish, or replace aging signage</li>
-        <li>Durable materials that protect community investment</li>
-        <li>Solutions to match your budget</li>
-        <li>Friendly, local team based in Southlake, TX</li>
-      </ul>
+      <p>Refresh, refurbish, or replace signage.</p>
       <!-- IMAGE: audience_hoas (800x600) -->
       <img class="img-audience-hoas" src="assets/audience_hoas.png" alt="HOA decorative signage">
       <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Renew Your Neighborhood</button>
@@ -82,132 +87,50 @@
   </section>
 
   <!-- ================= PROJECTS CAROUSEL ================= -->
- <section id="projects">
-  <h2>Recent Projects</h2>
-  <div class="carousel">
-    <div class="carousel-track" id="carouselTrack">
-      <!-- IMAGE: carousel_01 (1200x800) -->
-      <img class="img-carousel-01" src="assets/carousel_01.jpg" alt="Project 1 signage">
-      <!-- IMAGE: carousel_02 (1200x800) -->
-      <img class="img-carousel-02" src="assets/carousel_02.jpg" alt="Project 2 signage">
-      <!-- IMAGE: carousel_03 (1200x800) -->
-      <img class="img-carousel-03" src="assets/carousel_03.jpg" alt="Project 3 signage">
-      <!-- IMAGE: carousel_04 (1200x800) -->
-      <img class="img-carousel-04" src="assets/carousel_04.jpg" alt="Project 4 signage">
-      <!-- IMAGE: carousel_05 (1200x800) -->
-      <img class="img-carousel-05" src="assets/carousel_05.jpg" alt="Project 5 signage">
-      <!-- IMAGE: carousel_06 (1200x800) -->
-      <img class="img-carousel-06" src="assets/carousel_06.jpg" alt="Project 6 signage">
-      <!-- IMAGE: carousel_07 (1200x800) -->
-      <img class="img-carousel-07" src="assets/carousel_07.jpg" alt="Project 7 signage">
-      <!-- IMAGE: carousel_08 (1200x800) -->
-      <img class="img-carousel-08" src="assets/carousel_08.jpg" alt="Project 8 signage">
-      <!-- IMAGE: carousel_09 (1200x800) -->
-      <img class="img-carousel-09" src="assets/carousel_09.jpg" alt="Project 9 signage">
-      <!-- IMAGE: carousel_10 (1200x800) -->
-      <img class="img-carousel-10" src="assets/carousel_10.jpg" alt="Project 10 signage">
-      <!-- IMAGE: carousel_11 (1200x800) -->
-      <img class="img-carousel-11" src="assets/carousel_11.jpg" alt="Project 11 signage">
-      <!-- IMAGE: carousel_12 (1200x800) -->
-      <img class="img-carousel-12" src="assets/carousel_12.jpg" alt="Project 12 signage">
+  <section id="projects">
+    <h2>Recent Projects</h2>
+    <div class="carousel">
+      <img class="img-carousel-01" src="assets/carousel_01.png" alt="Project 1 signage">
+      <img class="img-carousel-02" src="assets/carousel_02.png" alt="Project 2 signage">
+      <img class="img-carousel-03" src="assets/carousel_03.png" alt="Project 3 signage">
+      <img class="img-carousel-04" src="assets/carousel_04.png" alt="Project 4 signage">
+      <!-- Add more images here -->
     </div>
-  </div>
-  <!--FUTURE BUTTON "SEE MORE PROJECTS" <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">See More Projects</button>-->
-</section>
+    <!-- <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">See More Projects</button> -->
+  </section>
 
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="img-contact-bg"
-  style="background-image: url('assets/contact_bg.png'); background-size: cover; background-position: center;">
-  <!-- IMAGE: contact_bg (1600x900) - Contact section background -->
-  <h2>Craft your community's story with Identitec.</h2>
-  
-  <form action="https://formspree.io/f/xkgzlkyk" method="POST">
-    <input type="text" name="name" placeholder="Name" required />
-    <input type="email" name="email" placeholder="Email" required />
-    <select name="role" required>
-      <option value="">I am a...</option>
-      <option value="developer">Developer/Subcontractor</option>
-      <option value="hoa">HOA Representative</option>
-    </select>
-    <textarea name="message" placeholder="Message" required></textarea>
-    <button type="submit" class="btn">Send</button>
-  </form>
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="img-contact-bg" style="background-image: url('assets/contact_bg.png');">
+    <!-- IMAGE: contact_bg (1600x900) -->
+    <h2>Let’s bring pride and value to your community.</h2>
+    <form action="https://formspree.io/f/xkgzlkyk" method="POST">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <select name="audience">
+        <option value="">I am a...</option>
+        <option value="developer">Developer</option>
+        <option value="hoa">HOA Representative</option>
+      </select>
+      <textarea name="message" placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p>info@identitecsigns.com | (817) 329-0411 | Southlake, TX</p>
+  </section>
 
-  <p>info@identitecsigns.com | (817) 329-0411 | Southlake, TX</p>
-</section>
+  <!-- ================= FOOTER ================= -->
+  <footer class="img-footer-accent" style="background-image: url('assets/footer_accent.png');">
+    <!-- IMAGE: footer_accent (1920x400) -->
+    <p>© Identitec Signs <span id="year"></span> | Southlake, TX</p>
+    <p><a href="mailto:info@identitecsigns.com">info@identitecsigns.com</a> | (817) 329-0411</p>
+    <p>Follow us: [LinkedIn] [Meta]</p>
+  </footer>
 
- <!-- ================= FOOTER ================= -->
-<footer class="img-footer-accent"
-  style="background-image: url('assets/footer_accent.png'); background-size: cover;">
-  <!-- IMAGE: footer_accent (1920x400) - Footer accent background -->
-  <p>© <span id="year"></span> Identitec Signs | Southlake, TX</p>
-  <p><a href="mailto:info@identitecsigns.com">info@identitecsigns.com</a> | (817) 329-0411</p>
-  <p>Follow us: [LinkedIn] [Meta]</p>
-</footer>
-
-<script>
-  // Insert current year into footer
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
-  <!-- ================= SCRIPTS ================= -->
   <script>
-    // dynamic header offset
-    function updateHeaderHeight() {
-      const header = document.querySelector('header');
-      if (header) {
-        document.documentElement.style.setProperty(
-          '--header-height',
-          header.offsetHeight + 'px'
-        );
-      }
-    }
-    window.addEventListener('load', updateHeaderHeight);
-    window.addEventListener('resize', updateHeaderHeight);
-
-    // debug toggle
-    function toggleDebug() {
-      document.body.classList.toggle('debug');
-    }
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-  
-<script>
-  // Carousel script
-  const track = document.getElementById("carouselTrack");
-  const slides = track.children.length;
-  const clone = track.innerHTML; 
-  track.innerHTML += clone; // duplicate all slides once for looping
-  
-  let index = 0;
-  const totalSlides = track.children.length; // now 24 (12 original + 12 clone)
 
-  function moveCarousel() {
-    index++;
-    track.style.transform = `translateX(-${index * 25}%)`; // 25% = 4 visible at once
-
-    // reset after original set ends
-    if (index >= slides) {
-      setTimeout(() => {
-        track.style.transition = "none";
-        index = 0;
-        track.style.transform = `translateX(0)`;
-        // re-enable transition
-        setTimeout(() => {
-          track.style.transition = "transform 0.8s ease";
-        }, 50);
-      }, 800); // wait for the transition to finish
-    }
-  }
-
-  setInterval(moveCarousel, 3000);
-</script>
-
-  <button onclick="toggleDebug()" 
-          style="position:fixed;bottom:20px;right:20px;z-index:9999;
-                 background:#8C6239;color:white;padding:8px 12px;
-                 border:none;border-radius:4px;cursor:pointer;">
+  <button onclick="toggleDebug()" style="position:fixed;bottom:20px;right:20px;z-index:9999;background:#8C6239;color:white;padding:8px 12px;border:none;border-radius:4px;cursor:pointer;">
     Toggle Debug
   </button>
-
 </body>
 </html>
