@@ -47,40 +47,88 @@ header {
   align-items: center;
   padding: 12px 40px;
   z-index: 1000;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
 }
 
-header .logo {
-  font-family: var(--font-header);
-  font-weight: 600;
-  color: var(--navy);
-  font-size: 1.25rem;
-}
-
-.logo a {
-  text-decoration: none;   /* removes underline */
-  color: inherit;          /* inherits .logo color */
-  font-weight: inherit;    /* use same weight as .logo */
+header .logo a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--dark-orange);
+  text-decoration: none;
 }
 
 header nav {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 header nav a {
-  text-decoration: none;
-  color: var(--navy);
   font-weight: 600;
+  color: var(--dark-gray);
+  text-decoration: none;
 }
 
 header .contact-top {
-  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 header .contact-top a {
+  color: var(--dark-gray);
   text-decoration: none;
-  color: var(--charcoal);
+}
+
+header button {
+  background: var(--dark-orange);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ================= RESPONSIVE HEADER ================= */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 20px;
+  }
+
+  header nav {
+    width: 100%;
+    justify-content: space-around;
+    margin: 10px 0;
+  }
+
+  header .contact-top {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 600px) {
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  header .contact-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  header button {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* ================= HERO ================= */
