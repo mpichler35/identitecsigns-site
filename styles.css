@@ -1,62 +1,46 @@
-/* ======== Root Variables ======== */
+/* ================= ROOT VARIABLES ================= */
 :root {
   --navy: #0A2240;
   --bronze: #8C6239;
   --deep-green: #2E5339;
   --light-gray: #D9D9D6;
   --charcoal: #4D4D4D;
+
   --font-header: 'Montserrat', Arial, sans-serif;
   --font-body: 'Merriweather', 'Times New Roman', serif;
 
-  --header-height: 80px; /* fallback for anchor offset */
-
+  --header-height: 80px; /* updated dynamically by JS */
 }
 
-/* ======== Global Fixes ======== */
-section {
+/* Apply offset for all anchored sections */
+section, header, footer, div[id] {
   scroll-margin-top: var(--header-height);
 }
 
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* ================= GLOBAL STYLES ================= */
 body {
+  margin: 0;
   font-family: var(--font-body);
-  color: var(--navy);
+  color: var(--charcoal);
   line-height: 1.6;
-  background: white;
 }
 
-/* ======== Reusable Button Style ======== */
-.btn {
-  display: inline-block;
-  background: var(--bronze);
-  color: white;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 4px;
-  cursor: pointer;
+h1, h2, h3, h4 {
   font-family: var(--font-header);
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  text-align: center;
-  transition: background 0.3s ease;
+  margin: 0 0 12px;
+  color: var(--navy);
 }
 
-.btn:hover {
-  background: var(--deep-green);
-  transform: translateY(-2px);
-}
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
 
-/* ======== Header ======== */
+/* ================= HEADER ================= */
 header {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -72,98 +56,110 @@ header {
 
 header .logo {
   font-family: var(--font-header);
-  font-weight: 700;
-  font-size: 1.4rem;
+  font-weight: 600;
   color: var(--navy);
+  font-size: 1.25rem;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
 }
 
 header nav a {
-  margin: 0 15px;
   text-decoration: none;
   color: var(--navy);
-  font-family: var(--font-header);
   font-weight: 600;
-}
-
-header nav a:hover {
-  color: var(--bronze);
 }
 
 header .contact-top {
   font-size: 0.9rem;
-  font-family: var(--font-header);
 }
 
-/* ======== Hero (updated) ======== */
+header .contact-top a {
+  text-decoration: none;
+  color: var(--charcoal);
+}
+
+/* ================= HERO ================= */
 .hero {
-  padding: 100px 20px;  /* breathing space */
-  height: auto;         /* natural height */
-  background-size: cover;
-  background-position: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
   color: white;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px; /* reduced height */
 }
 
 .hero h1 {
-  font-family: var(--font-header);
-  font-size: 2.8rem;
-  margin-bottom: 10px;
+  color: white;
+  font-size: 2.5rem;
 }
 
 .hero p {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   margin-bottom: 20px;
 }
 
-/* ======== Sections ======== */
-section {
-  padding: 80px 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-h2, h3 {
+/* ================= CTA BUTTONS ================= */
+button, 
+.btn {
+  display: inline-block;
+  background: var(--bronze);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 4px;
+  cursor: pointer;
   font-family: var(--font-header);
-  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
+button:hover, 
+.btn:hover {
+  background: var(--deep-green);
+  transform: translateY(-2px);
+}
+
+/* ================= SPLIT SECTIONS ================= */
 .split {
   display: flex;
   gap: 40px;
-  flex-wrap: wrap;
+  align-items: center;
+  padding: 80px 40px;
 }
 
-.split > div {
-  flex: 1;
-  min-width: 300px;
+.split img {
+  max-width: 100%;
+  border-radius: 4px;
 }
 
-/* ======== Carousel ======== */
+/* ================= CAROUSEL ================= */
 .carousel {
   display: flex;
   overflow-x: auto;
   gap: 20px;
-  scroll-snap-type: x mandatory;
+  padding: 40px;
 }
 
 .carousel img {
-  width: 25%; /* 4 visible at a time on desktop */
-  min-width: 300px;
-  border-radius: 8px;
-  scroll-snap-align: center;
+  flex: 0 0 auto;
+  width: 25%; /* 4 at a time */
+  border-radius: 4px;
 }
 
-/* ======== Contact Form ======== */
+/* ================= CONTACT ================= */
 #contact {
+  padding: 80px 40px;
   color: white;
   text-align: center;
-  background-size: cover;
-  background-position: center;
-  padding: 100px 20px;
 }
 
 #contact form {
@@ -171,72 +167,26 @@ h2, h3 {
   flex-direction: column;
   gap: 12px;
   max-width: 500px;
-  margin: 20px auto;
+  margin: 0 auto 20px auto;
 }
 
 #contact input,
 #contact select,
 #contact textarea {
   padding: 10px;
-  border: 1px solid var(--light-gray);
+  border: none;
   border-radius: 4px;
   font-family: var(--font-body);
 }
 
-#contact button {
-  width: 100%;
-}
-
-/* ======== Footer ======== */
+/* ================= FOOTER ================= */
 footer {
-  background: var(--navy);
-  color: white;
-  padding: 40px 20px;
+  padding: 40px;
   text-align: center;
-  font-size: 0.9rem;
+  color: white;
 }
 
-footer a {
-  color: var(--bronze);
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: var(--light-gray);
-}
-
-/* ======== Responsive ======== */
-@media (max-width: 768px) {
-  .carousel img {
-    width: 50%; /* 2 at a time on tablets */
-  }
-}
-
-@media (max-width: 480px) {
-  .carousel img {
-    width: 100%; /* 1 at a time on phones */
-  }
-  header {
-    flex-direction: column;
-    padding: 10px;
-  }
-  header nav {
-    margin-top: 10px;
-  }
-}
-
-/* ======== IMAGE PLACEHOLDER CLASSES ======== */
-.img-hero-main {}
-.img-about-services {}
-.img-audience-developers {}
-.img-audience-hoas {}
-.img-carousel-01 {} .img-carousel-02 {} .img-carousel-03 {} .img-carousel-04 {}
-.img-carousel-05 {} .img-carousel-06 {} .img-carousel-07 {} .img-carousel-08 {}
-.img-carousel-09 {} .img-carousel-10 {} .img-carousel-11 {} .img-carousel-12 {}
-.img-contact-bg {}
-.img-footer-accent {}
-
-/* ======== DEBUG MODE ======== */
+/* ================= DEBUG MODE ================= */
 body.debug .img-hero-main,
 body.debug .img-about-services,
 body.debug .img-audience-developers,
@@ -258,4 +208,15 @@ body.debug .img-footer-accent {
   border: 4px dashed red !important;
   background-color: #f5f5f5 !important;
   position: relative;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .split {
+    flex-direction: column;
+    text-align: center;
+  }
+  .carousel img {
+    width: 80%;
+  }
 }
