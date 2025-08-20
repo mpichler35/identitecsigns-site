@@ -130,6 +130,20 @@
   </footer>
 
 <script>
+  // dynamic header offset
+  function updateHeaderHeight() {
+    const header = document.querySelector('header');
+    if (header) {
+      document.documentElement.style.setProperty(
+        '--header-height',
+        header.offsetHeight + 'px'
+      );
+    }
+  }
+  window.addEventListener('load', updateHeaderHeight);
+  window.addEventListener('resize', updateHeaderHeight);
+
+  // debug toggle
   function toggleDebug() {
     document.body.classList.toggle('debug');
   }
