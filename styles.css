@@ -57,6 +57,12 @@ header .logo {
   font-size: 1.25rem;
 }
 
+.logo a {
+  text-decoration: none;   /* removes underline */
+  color: inherit;          /* inherits .logo color */
+  font-weight: inherit;    /* use same weight as .logo */
+}
+
 header nav {
   display: flex;
   gap: 20px;
