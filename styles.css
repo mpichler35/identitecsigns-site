@@ -12,24 +12,20 @@
   --header-height: 80px; /* updated dynamically by JS */
 }
 
-/* Apply offset for all anchored sections */
-section, header, footer, div[id] {
-  scroll-margin-top: var(--header-height);
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* ================= GLOBAL STYLES ================= */
+/* Add top padding equal to header so content is never hidden */
 body {
   margin: 0;
+  padding-top: var(--header-height);
   font-family: var(--font-body);
   color: var(--charcoal);
   line-height: 1.6;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* ================= HEADINGS ================= */
 h1, h2, h3, h4 {
   font-family: var(--font-header);
   margin: 0 0 12px;
@@ -106,7 +102,8 @@ header .contact-top a {
 
 /* ================= CTA BUTTONS ================= */
 button, 
-.btn {
+.btn, 
+header .contact-top button {
   display: inline-block;
   background: var(--bronze);
   color: white;
@@ -123,7 +120,8 @@ button,
 }
 
 button:hover, 
-.btn:hover {
+.btn:hover,
+header .contact-top button:hover {
   background: var(--deep-green);
   transform: translateY(-2px);
 }
@@ -151,7 +149,7 @@ button:hover,
 
 .carousel img {
   flex: 0 0 auto;
-  width: 25%; /* 4 at a time */
+  width: 25%; /* 4 at a time on desktop */
   border-radius: 4px;
 }
 
@@ -220,4 +218,3 @@ body.debug .img-footer-accent {
     width: 80%;
   }
 }
-
