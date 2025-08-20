@@ -195,6 +195,24 @@ header .contact-top button:hover {
   transform: translateY(-2px);
 }
 
+/* ================= ABOUT / SERVICES IMAGE ================= */
+.img-about-services {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+  .img-about-services {
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+}
+
 /* ================= SPLIT SECTIONS ================= */
 .split {
   display: flex;
