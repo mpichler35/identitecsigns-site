@@ -5,64 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Identitec Signs | North Texas Decorative Signage Experts</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Merriweather&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Merriweather', serif;
-      color: #0A2240;
-    }
-    header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      background: white;
-      border-bottom: 1px solid #ddd;
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 10px 30px;
-      z-index: 1000;
-    }
-    header nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #0A2240;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
-    }
-    .hero {
-      height: 100vh;
-      background-size: cover;
-      background-position: center;
-      display: flex; flex-direction: column;
-      justify-content: center; align-items: center;
-      text-align: center;
-      color: white;
-    }
-    section {
-      padding: 80px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .split {
-      display: flex; gap: 40px; flex-wrap: wrap;
-    }
-    .split > div {
-      flex: 1;
-      min-width: 300px;
-    }
-    .carousel {
-      display: flex; overflow-x: scroll; gap: 20px;
-    }
-    .carousel img {
-      width: 25%; /* 4 visible at a time on desktop */
-      min-width: 300px;
-      border-radius: 8px;
-    }
-    footer {
-      background: #0A2240;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
@@ -85,7 +28,7 @@
   </header>
 
   <!-- ================= HERO ================= -->
-  <section class="hero" id="hero" 
+  <section class="hero img-hero-main" id="hero" 
     style="background-image: url('path/to/hero_main.jpg');">
     <!-- IMAGE: hero_main (1920x1080) - Hero background -->
     <h1>North Texas Decorative Signage Experts</h1>
@@ -101,7 +44,7 @@
     </div>
     <div>
       <!-- IMAGE: about_services (1200x800) - About/Services section image -->
-      <img src="path/to/about_services.jpg" alt="Craftsman installing signage">
+      <img class="img-about-services" src="path/to/about_services.jpg" alt="Craftsman installing signage">
     </div>
   </section>
 
@@ -111,14 +54,14 @@
       <h3>For Developers</h3>
       <p>Dependable proposals, surveys, precision installation.</p>
       <!-- IMAGE: audience_developers (800x600) - Audience split Developers -->
-      <img src="path/to/audience_developers.jpg" alt="Developer blueprint signage">
+      <img class="img-audience-developers" src="path/to/audience_developers.jpg" alt="Developer blueprint signage">
       <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Request Proposal</button>
     </div>
     <div id="hoas">
       <h3>For HOAs</h3>
       <p>Refresh, refurbish, or replace signage.</p>
       <!-- IMAGE: audience_hoas (800x600) - Audience split HOAs -->
-      <img src="path/to/audience_hoas.jpg" alt="HOA decorative signage">
+      <img class="img-audience-hoas" src="path/to/audience_hoas.jpg" alt="HOA decorative signage">
       <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Renew Your Neighborhood</button>
     </div>
   </section>
@@ -128,35 +71,35 @@
     <h2>Recent Projects</h2>
     <div class="carousel">
       <!-- IMAGE: carousel_01 (1200x800) - Projects carousel image 1 -->
-      <img src="path/to/carousel_01.jpg" alt="Project 1 signage">
+      <img class="img-carousel-01" src="path/to/carousel_01.jpg" alt="Project 1 signage">
       <!-- IMAGE: carousel_02 (1200x800) - Projects carousel image 2 -->
-      <img src="path/to/carousel_02.jpg" alt="Project 2 signage">
+      <img class="img-carousel-02" src="path/to/carousel_02.jpg" alt="Project 2 signage">
       <!-- IMAGE: carousel_03 (1200x800) - Projects carousel image 3 -->
-      <img src="path/to/carousel_03.jpg" alt="Project 3 signage">
+      <img class="img-carousel-03" src="path/to/carousel_03.jpg" alt="Project 3 signage">
       <!-- IMAGE: carousel_04 (1200x800) - Projects carousel image 4 -->
-      <img src="path/to/carousel_04.jpg" alt="Project 4 signage">
+      <img class="img-carousel-04" src="path/to/carousel_04.jpg" alt="Project 4 signage">
       <!-- IMAGE: carousel_05 (1200x800) - Projects carousel image 5 -->
-      <img src="path/to/carousel_05.jpg" alt="Project 5 signage">
+      <img class="img-carousel-05" src="path/to/carousel_05.jpg" alt="Project 5 signage">
       <!-- IMAGE: carousel_06 (1200x800) - Projects carousel image 6 -->
-      <img src="path/to/carousel_06.jpg" alt="Project 6 signage">
+      <img class="img-carousel-06" src="path/to/carousel_06.jpg" alt="Project 6 signage">
       <!-- IMAGE: carousel_07 (1200x800) - Projects carousel image 7 -->
-      <img src="path/to/carousel_07.jpg" alt="Project 7 signage">
+      <img class="img-carousel-07" src="path/to/carousel_07.jpg" alt="Project 7 signage">
       <!-- IMAGE: carousel_08 (1200x800) - Projects carousel image 8 -->
-      <img src="path/to/carousel_08.jpg" alt="Project 8 signage">
+      <img class="img-carousel-08" src="path/to/carousel_08.jpg" alt="Project 8 signage">
       <!-- IMAGE: carousel_09 (1200x800) - Projects carousel image 9 -->
-      <img src="path/to/carousel_09.jpg" alt="Project 9 signage">
+      <img class="img-carousel-09" src="path/to/carousel_09.jpg" alt="Project 9 signage">
       <!-- IMAGE: carousel_10 (1200x800) - Projects carousel image 10 -->
-      <img src="path/to/carousel_10.jpg" alt="Project 10 signage">
+      <img class="img-carousel-10" src="path/to/carousel_10.jpg" alt="Project 10 signage">
       <!-- IMAGE: carousel_11 (1200x800) - Projects carousel image 11 -->
-      <img src="path/to/carousel_11.jpg" alt="Project 11 signage">
+      <img class="img-carousel-11" src="path/to/carousel_11.jpg" alt="Project 11 signage">
       <!-- IMAGE: carousel_12 (1200x800) - Projects carousel image 12 -->
-      <img src="path/to/carousel_12.jpg" alt="Project 12 signage">
+      <img class="img-carousel-12" src="path/to/carousel_12.jpg" alt="Project 12 signage">
     </div>
     <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">See More Projects</button>
   </section>
 
   <!-- ================= CONTACT ================= -->
-  <section id="contact" 
+  <section id="contact" class="img-contact-bg"
     style="background-image: url('path/to/contact_bg.jpg'); background-size: cover; background-position: center;">
     <!-- IMAGE: contact_bg (1600x900) - Contact section background -->
     <h2>Let’s bring pride and value to your community.</h2>
@@ -175,7 +118,7 @@
   </section>
 
   <!-- ================= FOOTER ================= -->
-  <footer 
+  <footer class="img-footer-accent"
     style="background-image: url('path/to/footer_accent.jpg'); background-size: cover;">
     <!-- IMAGE: footer_accent (1920x400) - Footer accent background -->
     <p>© Identitec Signs | Southlake, TX</p>
