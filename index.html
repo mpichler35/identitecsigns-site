@@ -153,6 +153,17 @@
       document.body.classList.toggle('debug');
     }
   </script>
+  
+  <script>
+  const track = document.getElementById("carouselTrack");
+  const slides = track.children.length;
+  let index = 0;
+
+  setInterval(() => {
+    index = (index + 1) % slides;
+    track.style.transform = `translateX(-${index * 25}%)`; 
+  }, 3000); // change every 3 seconds
+  </script>
 
   <button onclick="toggleDebug()" 
           style="position:fixed;bottom:20px;right:20px;z-index:9999;
