@@ -185,7 +185,8 @@ header .contact-top a {
 .carousel {
   display: flex;
   gap: 20px;
-  overflow: hidden;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
 }
 
 .carousel img {
@@ -193,6 +194,7 @@ header .contact-top a {
   width: 25%;
   object-fit: cover;
   border-radius: 6px;
+  scroll-snap-align: center;
 }
 
 /* ================= CONTACT ================= */
