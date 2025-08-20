@@ -220,3 +220,21 @@ body.debug .img-footer-accent {
     width: 80%;
   }
 }
+
+body {
+  padding-top: var(--header-height);
+}
+
+button, .btn {
+  background: var(--bronze) !important;
+  color: white !important;
+  font-family: var(--font-header) !important;
+  padding: 12px 28px !important;
+  border-radius: 4px !important;
+  border: none !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+}
+button:hover, .btn:hover {
+  background: var(--deep-green) !important;
+}
