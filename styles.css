@@ -141,15 +141,17 @@ header .contact-top button:hover {
 
 /* ================= CAROUSEL ================= */
 .carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
   display: flex;
-  overflow-x: auto;
-  gap: 20px;
-  padding: 40px;
+  transition: transform 0.8s ease;
 }
 
 .carousel img {
-  flex: 0 0 auto;
-  width: 25%; /* 4 at a time on desktop */
+  flex: 0 0 25%; /* Show 4 at a time */
   border-radius: 4px;
 }
 
