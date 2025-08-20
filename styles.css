@@ -167,6 +167,7 @@ header button {
 .hero p {
   font-size: 1.25rem;
   margin-bottom: 20px;
+  color: white;   /* force white for readability */
 }
 
 /* ================= CTA BUTTONS ================= */
