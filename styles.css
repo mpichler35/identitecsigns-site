@@ -9,6 +9,7 @@
   --font-body: 'Merriweather', 'Times New Roman', serif;
 
   --header-height: 80px; /* fallback for anchor offset */
+
 }
 
 /* ======== Global Fixes ======== */
@@ -52,6 +53,7 @@ body {
 
 .btn:hover {
   background: var(--deep-green);
+  transform: translateY(-2px);
 }
 
 /* ======== Header ======== */
