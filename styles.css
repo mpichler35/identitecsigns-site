@@ -85,6 +85,7 @@ header .contact-top a {
 
 /* ================= HERO ================= */
 .hero {
+  position: relative;               /* enables overlay positioning */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,12 +94,26 @@ header .contact-top a {
   color: white;
   background-size: cover;
   background-position: center;
-  padding: 100px 20px; /* reduced height */
+  padding: 100px 20px;              /* reduced height */
+  overflow: hidden;                 /* ensures overlay doesn’t spill */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);      /* dark overlay for readability */
+  z-index: 0;
+}
+
+.hero * {
+  position: relative;
+  z-index: 1;                       /* keeps text/buttons above overlay */
 }
 
 .hero h1 {
-  color: white;
   font-size: 2.5rem;
+  margin-bottom: 10px;              /* small spacing from subline */
 }
 
 .hero p {
@@ -187,9 +202,26 @@ header .contact-top button:hover {
 
 /* ================= FOOTER ================= */
 footer {
+  position: relative;               /* enables overlay positioning */
   padding: 40px;
   text-align: center;
   color: white;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;                 /* ensures overlay doesn’t spill */
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);      /* slightly darker than hero for contrast */
+  z-index: 0;
+}
+
+footer * {
+  position: relative;
+  z-index: 1;                       /* keeps text above overlay */
 }
 
 /* ================= DEBUG MODE ================= */
