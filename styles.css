@@ -1,40 +1,40 @@
-/* ================= ROOT VARIABLES ================= */
 :root {
-  --navy: #0A2240;
   --bronze: #8C6239;
-  --deep-green: #2E5339;
-  --light-gray: #D9D9D6;
-  --charcoal: #4D4D4D;
-
-  --font-header: 'Montserrat', Arial, sans-serif;
-  --font-body: 'Merriweather', 'Times New Roman', serif;
-
-  --header-height: 80px; /* updated dynamically by JS */
+  --charcoal: #333333;
+  --light-gray: #e0e0e0;
+  --navy: #1a2940;
+  --white: #ffffff;
 }
 
-/* Add top padding equal to header so content is never hidden */
+/* ================= GLOBAL ================= */
 body {
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
-  padding-top: var(--header-height);
-  font-family: var(--font-body);
+  padding-top: var(--header-height, 80px);
   color: var(--charcoal);
-  line-height: 1.6;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-/* ================= HEADINGS ================= */
 h1, h2, h3, h4 {
-  font-family: var(--font-header);
-  margin: 0 0 12px;
   color: var(--navy);
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
+p {
+  line-height: 1.6;
+}
+
+button, .btn {
+  background: var(--bronze);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
 
 /* ================= HEADER ================= */
 header {
@@ -47,14 +47,14 @@ header {
   align-items: center;
   padding: 12px 40px;
   z-index: 1000;
-  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  flex-wrap: wrap;
 }
 
 header .logo a {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
-  color: var(--dark-orange);
+  color: var(--bronze);
   text-decoration: none;
 }
 
@@ -66,7 +66,7 @@ header nav {
 
 header nav a {
   font-weight: 600;
-  color: var(--dark-gray);
+  color: var(--charcoal);
   text-decoration: none;
 }
 
@@ -78,125 +78,53 @@ header .contact-top {
 }
 
 header .contact-top a {
-  color: var(--dark-gray);
+  color: var(--charcoal);
   text-decoration: none;
-}
-
-header button {
-  background: var(--dark-orange);
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-/* ================= RESPONSIVE HEADER ================= */
-@media (max-width: 900px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 12px 20px;
-  }
-
-  header nav {
-    width: 100%;
-    justify-content: space-around;
-    margin: 10px 0;
-  }
-
-  header .contact-top {
-    width: 100%;
-    justify-content: space-between;
-  }
-}
-
-@media (max-width: 600px) {
-  header nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  header .contact-top {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-  }
-
-  header button {
-    width: 100%;
-    text-align: center;
-  }
 }
 
 /* ================= HERO ================= */
 .hero {
-  position: relative;               /* enables overlay positioning */
+  position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
   background-size: cover;
   background-position: center;
-  padding: 100px 20px;              /* reduced height */
-  overflow: hidden;                 /* ensures overlay doesn’t spill */
+  padding: 100px 20px;
+  overflow: hidden;
+  color: white;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.4);      /* dark overlay for readability */
+  background: rgba(0,0,0,0.4);
   z-index: 0;
 }
 
 .hero * {
   position: relative;
-  z-index: 1;                       /* keeps text/buttons above overlay */
+  z-index: 1;
+}
+
+.hero h1,
+.hero p {
+  color: white !important;
 }
 
 .hero h1 {
   font-size: 2.5rem;
-  margin-bottom: 10px;              /* small spacing from subline */
+  margin-bottom: 10px;
 }
 
 .hero p {
   font-size: 1.25rem;
   margin-bottom: 20px;
-  color: white;   /* force white for readability */
 }
 
-/* ================= CTA BUTTONS ================= */
-button, 
-.btn, 
-header .contact-top button {
-  display: inline-block;
-  background: var(--bronze);
-  color: white;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: var(--font-header);
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  text-align: center;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-button:hover, 
-.btn:hover,
-header .contact-top button:hover {
-  background: var(--deep-green);
-  transform: translateY(-2px);
-}
-
-/* ================= ABOUT / SERVICES IMAGE ================= */
+/* ================= ABOUT / SERVICES ================= */
 .img-about-services {
   width: 100%;
   max-width: 500px;
@@ -214,7 +142,7 @@ header .contact-top button:hover {
   }
 }
 
-/* ================= SPLIT SECTIONS ================= */
+/* ================= SPLIT ================= */
 .split {
   display: flex;
   flex-wrap: wrap;
@@ -225,158 +153,92 @@ header .contact-top button:hover {
 }
 
 .split > div {
-  flex: 1 1 45%;           /* each side takes ~half */
-  min-width: 280px;        /* prevents collapsing too small */
-  text-align: left;
+  flex: 1 1 45%;
+  min-width: 280px;
+  text-align: center;
 }
 
-.split h3 {
-  margin-bottom: 10px;
-}
-
-/* ================= AUDIENCE SPLIT IMAGES ================= */
 .img-audience-developers,
 .img-audience-hoas {
-  width: 100%;             /* fill parent column */
-  max-width: 400px;        /* cap on desktop */
-  aspect-ratio: 4 / 3;     /* consistent box ratio */
-  object-fit: cover;       /* crops evenly */
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
   display: block;
-  margin: 0 auto 20px;     /* centered with space below */
-  border-radius: 6px;      /* optional polish */
+  margin: 0 auto 20px;
+  border-radius: 6px;
 }
 
-/* ================= AUDIENCE SPLIT RESPONSIVE BEHAVIOR ================= */
 @media (max-width: 900px) {
   .split {
-    flex-direction: column; /* stack instead of side by side */
+    flex-direction: column;
     gap: 20px;
   }
-
   .img-audience-developers,
   .img-audience-hoas {
     max-width: 100%;
-    aspect-ratio: 16 / 9;   /* panoramic crop on smaller screens */
+    aspect-ratio: 16 / 9;
   }
 }
 
 /* ================= CAROUSEL ================= */
 .carousel {
-  overflow: hidden;
-  width: 100%;
-}
-
-.carousel-track {
   display: flex;
-  transition: transform 0.8s ease;
+  gap: 20px;
+  overflow: hidden;
 }
 
 .carousel img {
-  flex: 0 0 auto;         /* don’t shrink, stay side-by-side */
-  width: 25%;             /* 4 visible at a time on desktop */
-  aspect-ratio: 3 / 4;    /* consistent frame */
-  object-fit: cover;      /* crops to fit box */
-  max-height: 250px;      /* keeps them compact */
-  border-radius: 6px;     /* optional: rounded corners */
-  margin: 0 5px;
-}
-
-/* ================= CAROUSEL RESPONSIVE BEHAVIOR ================= */
-/* On tablets (2 visible at once) */
-@media (max-width: 900px) {
-  .carousel img {
-    width: 50%;
-    max-height: 200px;
-  }
-}
-
-/* On phones (1 visible at once) */
-@media (max-width: 600px) {
-  .carousel img {
-    width: 100%;
-    max-height: 180px;
-  }
+  flex: 0 0 auto;
+  width: 25%;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
 /* ================= CONTACT ================= */
 #contact {
-  padding: 80px 40px;
   color: white;
+  padding: 60px 20px;
   text-align: center;
 }
 
 #contact form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   max-width: 500px;
-  margin: 0 auto 20px auto;
+  margin: 20px auto;
 }
 
 #contact input,
 #contact select,
 #contact textarea {
   padding: 10px;
-  border: none;
   border-radius: 4px;
-  font-family: var(--font-body);
+  border: none;
+}
+
+#contact button {
+  align-self: center;
 }
 
 /* ================= FOOTER ================= */
 footer {
-  position: relative;               /* enables overlay positioning */
-  padding: 40px;
+  position: relative;
+  padding: 40px 20px;
   text-align: center;
   color: white;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;                 /* ensures overlay doesn’t spill */
 }
 
 footer::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.5);      /* slightly darker than hero for contrast */
+  background: rgba(0,0,0,0.5);
   z-index: 0;
 }
 
 footer * {
   position: relative;
-  z-index: 1;                       /* keeps text above overlay */
-}
-
-/* ================= DEBUG MODE ================= */
-body.debug .img-hero-main,
-body.debug .img-about-services,
-body.debug .img-audience-developers,
-body.debug .img-audience-hoas,
-body.debug .img-carousel-01,
-body.debug .img-carousel-02,
-body.debug .img-carousel-03,
-body.debug .img-carousel-04,
-body.debug .img-carousel-05,
-body.debug .img-carousel-06,
-body.debug .img-carousel-07,
-body.debug .img-carousel-08,
-body.debug .img-carousel-09,
-body.debug .img-carousel-10,
-body.debug .img-carousel-11,
-body.debug .img-carousel-12,
-body.debug .img-contact-bg,
-body.debug .img-footer-accent {
-  border: 4px dashed red !important;
-  background-color: #f5f5f5 !important;
-  position: relative;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-  .split {
-    flex-direction: column;
-    text-align: center;
-  }
-  .carousel img {
-    width: 80%;
-  }
+  z-index: 1;
 }
