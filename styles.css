@@ -279,13 +279,23 @@ header .contact-top a {
 }
 
 .split > div {
-  flex: 0 0 calc(50% - 20px);  /* force equal halves, account for gap */
+  flex: 0 0 calc(50% - 20px);  /* equal halves even after margins */
   max-width: calc(50% - 20px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   box-sizing: border-box;
+}
+
+/* balance out align-left: only apply inside split */
+.split > .align-left {
+  padding-left: 40px;  /* whatever your align-left offset is */
+}
+
+/* balance the *other* column so it's visually equal */
+.split > div:not(.align-left) {
+  padding-right: 40px;  /* equal counterbalance */
 }
 
 /* Keep images responsive without forcing centering */
