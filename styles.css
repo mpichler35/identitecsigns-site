@@ -51,6 +51,20 @@ h3 { font-size: 1.5rem; }
   }
 }
 
+/* ================= MOBILE-ONLY ALIGN LEFT ================= */
+@media (max-width: 768px) {
+  .align-left-mobile {
+    margin-left: 20px;   /* match mobile header padding */
+    text-align: left;
+  }
+
+  .align-left-mobile img {
+    margin-left: 0;      /* don’t offset images */
+    margin-right: auto;  /* keep images centered */
+  }
+}
+
+
 /* ================= HEADER ================= */
 header {
   position: fixed;
