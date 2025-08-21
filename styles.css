@@ -100,10 +100,11 @@ header .contact-top a {
 /* Hamburger menu default (hidden on desktop) */
 .hamburger {
   display: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   background: none;
   border: none;
   cursor: pointer;
+  color: var(--charcoal);
 }
 
 /* Mobile header adjustments */
@@ -472,7 +473,12 @@ body.debug .img-footer-accent {
 
   /* Show hamburger on mobile */
    .hamburger {
-    display: block;        /* show the hamburger */
+    display: block;
+    background: var(--bronze);   /* brand color */
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    z-index: 1100; /* keep above nav */
   }
 
 /* Hide nav by default on mobile */
