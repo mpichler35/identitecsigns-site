@@ -404,6 +404,12 @@ header .contact-top button:hover {
   margin: 0 10px;            /* spacing between images */
 }
 
+/* Center buttons under carousel */
+.carousel > div button {
+  display: block;
+  margin: 20px auto 0 auto; /* center horizontally */
+}
+
 /* ================= CAROUSEL RESPONSIVE BEHAVIOR ================= */
 /* On tablets (2 visible at once) */
 @media (max-width: 900px) {
@@ -548,7 +554,7 @@ body.debug .img-footer-accent {
 /* ================= TESTIMONIALS ================= */
 #testimonials {
   background: var(--light-gray);
-  padding: 60px 20px;
+  padding: 40px 10px;
 }
 
 #testimonials h2 {
@@ -579,6 +585,8 @@ body.debug .img-footer-accent {
   font-weight: 600;
   color: var(--deep-green);
 }
+
+
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
@@ -635,6 +643,10 @@ body.debug .img-footer-accent {
   }
   #contact {
     padding: 20px 15px;
+  }
+  
+  #testimonials {
+    padding: 20px 5px;
   }
 }
 
