@@ -61,6 +61,37 @@ h3 { font-size: 1.5rem; }
   height: auto;
 }
 
+/* ================= CTA BUTTONS ================= */
+button, 
+.btn, 
+header .contact-top button {
+  display: inline-block;
+  background: var(--bronze);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-header);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, 
+.btn:hover,
+header .contact-top button:hover {
+  background: var(--deep-green);
+  transform: translateY(-2px);
+}
+/* Center CTAs inside split sections */
+.split button {
+  display: block;
+  margin: 20px auto 0 auto;  /* top spacing + center horizontally */
+}
+
 /* ================= HEADER ================= */
 header {
   position: fixed;
@@ -106,8 +137,6 @@ header .contact-top a {
   color: var(--dark-gray);
   text-decoration: none;
 }
-
-
 
 /* ================= RESPONSIVE HEADER ================= */
 @media (max-width: 900px) {
@@ -192,31 +221,7 @@ header .contact-top a {
   color: white;   /* force white for readability */
 }
 
-/* ================= CTA BUTTONS ================= */
-button, 
-.btn, 
-header .contact-top button {
-  display: inline-block;
-  background: var(--bronze);
-  color: white;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: var(--font-header);
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  text-align: center;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
 
-button:hover, 
-.btn:hover,
-header .contact-top button:hover {
-  background: var(--deep-green);
-  transform: translateY(-2px);
-}
 
 /* ================= ABOUT / SERVICES IMAGE ================= */
 .img-about-services {
