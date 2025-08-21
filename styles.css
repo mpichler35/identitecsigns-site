@@ -37,6 +37,20 @@ h1 { font-size: 2.5rem; }
 h2 { font-size: 2rem; }
 h3 { font-size: 1.5rem; }
 
+/* ================= UTILITY ================= */
+/* Align content with header logo */
+.align-left {
+  margin-left: 40px;    /* matches header padding on desktop */
+  text-align: left;
+}
+
+/* Responsive adjustment to match header padding */
+@media (max-width: 768px) {
+  .align-left {
+    margin-left: 20px;  /* matches header padding on mobile */
+  }
+}
+
 /* ================= HEADER ================= */
 header {
   position: fixed;
