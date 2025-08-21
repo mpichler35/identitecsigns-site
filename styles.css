@@ -258,10 +258,17 @@ header .contact-top a {
   flex: 1 1 45%;           /* each side takes ~half */
   min-width: 280px;        /* prevents collapsing too small */
   text-align: left;        /* keep text left-aligned */
-  
-  display: flex;           /* new: make each side a flex column */
+
+  display: flex;           /* flex column */
   flex-direction: column;
-  align-items: center;     /* new: center images + buttons */
+  align-items: center;     /* centers children like button */
+}
+
+.split > div img {
+  width: 100%;             /* image fills full width of column */
+  max-width: 400px;        /* cap so they don’t get oversized */
+  height: auto;            /* keep proportions */
+  margin-bottom: 20px;
 }
 
 .split h3 {
