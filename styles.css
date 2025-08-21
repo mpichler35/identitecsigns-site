@@ -459,16 +459,18 @@ body.debug .img-footer-accent {
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
+  /* Stack split sections vertically on mobile */
   .split {
     flex-direction: column;
     text-align: center;
   }
 
+  /* Scale carousel images on mobile */
   .carousel img {
     width: 80%;
   }
 
-  /* Mobile hamburger visible */
+  /* Hamburger menu visible on mobile */
   .hamburger {
     display: block;
     font-size: 1.8rem;
@@ -476,10 +478,10 @@ body.debug .img-footer-accent {
     border: none;
     cursor: pointer;
     color: var(--charcoal);
-    margin-left: auto; /* pushes it to right side of header */
+    margin-left: auto;   /* push hamburger to the right */
   }
 
-  /* Mobile nav hidden by default */
+  /* Hide nav by default on mobile */
   nav {
     display: none;
     flex-direction: column;
@@ -491,20 +493,20 @@ body.debug .img-footer-accent {
     padding: 10px 0;
   }
 
-  /* Show nav when active */
+  /* Show nav when toggled */
   nav.active {
     display: flex;
   }
 }
 
-/* Desktop overrides */
+/* Desktop behavior */
 @media (min-width: 769px) {
   nav {
-    display: flex;
+    display: flex;        /* normal horizontal layout */
     gap: 20px;
   }
 
   .hamburger {
-    display: none;
+    display: none;        /* hide hamburger on desktop */
   }
 }
