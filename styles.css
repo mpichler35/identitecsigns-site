@@ -158,6 +158,10 @@ header .contact-top a {
   color: white;                     /* ensure hero headline is always white */
 }
 
+.hero h3 {
+  color: white;                     /* ensure hero headline is always white */
+}
+
 .hero p {
   font-size: 1.25rem;
   margin-bottom: 20px;
