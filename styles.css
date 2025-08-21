@@ -404,7 +404,7 @@ header .contact-top button:hover {
 
 /* ================= CONTACT ================= */
 #contact {
-  padding: 80px 40px;
+  padding: 40px 20px;
   color: white;
   text-align: center;
 }
@@ -428,6 +428,16 @@ header .contact-top button:hover {
 
 #contact h2 {
   color: white;               /* ensure hero headline is always white */
+}
+
+/* Contact section plain links */
+#contact .plain-link {
+  color: white;            /* or inherit */
+  text-decoration: none;   /* remove underline */
+}
+
+#contact .plain-link:hover {
+  text-decoration: underline; /* optional hover */
 }
 
 /* ================= FOOTER ================= */
@@ -522,6 +532,21 @@ body.debug .img-footer-accent {
   /* Show nav when toggled */
   #nav-menu.active {
     display: flex;
+  }
+}
+
+/* Mobile adjustment for contact info */
+@media (max-width: 768px) {
+  #contact .separator {
+    display: none;  /* hide " | " */
+  }
+  #contact p a,
+  #contact p {
+    display: block;   /* stack email, phone, and location */
+    margin-bottom: 6px;
+  }
+  #contact {
+    padding: 20px 15px;
   }
 }
 
