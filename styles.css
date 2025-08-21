@@ -41,6 +41,7 @@ h3 { font-size: 1.5rem; }
 /* Align content with header logo */
 .align-left {
   margin-left: 40px;    /* matches header padding on desktop */
+  margin-right: 40px;    
   text-align: left;
 }
 
@@ -48,6 +49,7 @@ h3 { font-size: 1.5rem; }
 @media (max-width: 768px) {
   .align-left {
     margin-left: 20px;  /* matches header padding on mobile */
+    margin-right: 20px;  
   }
 }
 
@@ -65,6 +67,7 @@ h3 { font-size: 1.5rem; }
 @media (max-width: 768px) {
   .align-left-mobile {
     margin-left: 20px;   /* match mobile header padding */
+    margin-right: 20px;  
     text-align: left;
   }
 
