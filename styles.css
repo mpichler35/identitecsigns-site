@@ -471,17 +471,8 @@ body.debug .img-footer-accent {
   }
 
   /* Show hamburger on mobile */
-  .hamburger {
-    display: block;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    z-index: 2000; /* ensure above other elements */
-    font-size: 1.8rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--charcoal);
+   .hamburger {
+    display: block;        /* show the hamburger */
   }
 
   /* Hide nav by default on mobile */
