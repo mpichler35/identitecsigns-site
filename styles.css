@@ -51,6 +51,16 @@ h3 { font-size: 1.5rem; }
   }
 }
 
+/* Plain-link style for email + phone */
+.plain-link {
+  color: inherit;          /* inherit text color (white in your contact section) */
+  text-decoration: none;   /* remove underline */
+}
+
+.plain-link:hover {
+  text-decoration: underline;  /* optional hover effect */
+}
+
 /* ================= MOBILE-ONLY ALIGN LEFT ================= */
 @media (max-width: 768px) {
   .align-left-mobile {
