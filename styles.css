@@ -426,6 +426,10 @@ header .contact-top button:hover {
   font-family: var(--font-body);
 }
 
+#contact h2 {
+  color: white;               /* ensure hero headline is always white */
+}
+
 /* ================= FOOTER ================= */
 footer {
   position: relative;               /* enables overlay positioning */
@@ -460,9 +464,6 @@ footer a:hover {
   text-decoration: underline; /* optional, keeps accessibility clear */
 }
 
-footer h3 {
-  color: white;               /* ensure hero headline is always white */
-}
 
 /* ================= DEBUG MODE ================= */
 body.debug .img-hero-main,
