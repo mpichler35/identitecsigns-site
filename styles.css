@@ -130,7 +130,7 @@ header .contact-top a {
     padding: 10px 0;
   }
 
-  #nav-menuav.active {
+  #nav-menu.active {
     display: flex;        /* show when toggled */
   }
 
