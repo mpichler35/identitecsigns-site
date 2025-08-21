@@ -500,8 +500,9 @@ footer a:hover {
     margin: 5px 0;
   }
 
+  /* Remove pipes completely */
   .footer-contact span::after {
-    content: "";
+    content: none !important;
   }
 }
 
