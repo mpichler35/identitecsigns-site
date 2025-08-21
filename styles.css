@@ -459,26 +459,29 @@ body.debug .img-footer-accent {
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
-  /* Stack split sections vertically on mobile */
+  /* Split sections stack vertically */
   .split {
     flex-direction: column;
     text-align: center;
   }
 
-  /* Scale carousel images on mobile */
+  /* Carousel images resize */
   .carousel img {
     width: 80%;
   }
 
-  /* Hamburger menu visible on mobile */
+  /* Show hamburger on mobile */
   .hamburger {
     display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 2000; /* ensure above other elements */
     font-size: 1.8rem;
     background: none;
     border: none;
     cursor: pointer;
     color: var(--charcoal);
-    margin-left: auto;   /* push hamburger to the right */
   }
 
   /* Hide nav by default on mobile */
@@ -493,20 +496,13 @@ body.debug .img-footer-accent {
     padding: 10px 0;
   }
 
-  /* Show nav when toggled */
+  /* When active, nav shows */
   nav.active {
     display: flex;
   }
-}
 
-/* Desktop behavior */
-@media (min-width: 769px) {
-  nav {
-    display: flex;        /* normal horizontal layout */
-    gap: 20px;
-  }
-
-  .hamburger {
-    display: none;        /* hide hamburger on desktop */
+  /* Hide contact-top on mobile for cleaner header */
+  .contact-top {
+    display: none;
   }
 }
