@@ -227,6 +227,22 @@ header .contact-top a {
 
 
 /* ================= ABOUT / SERVICES IMAGE ================= */
+
+/* Force About section to behave like split layout */
+#about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-left: 0;   /* remove any default padding */
+  padding-right: 0;
+}
+
+#about > div {
+  flex: 1 1 45%;
+  min-width: 280px;
+  text-align: left;
+}
+
 .img-about-services {
   width: 100%;
   max-width: 500px;
