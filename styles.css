@@ -237,7 +237,7 @@ section[id] {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.4);      /* dark overlay for readability */
+  background: rgba(0,0,0,0.6);      /* dark overlay for readability */
   z-index: 0;
 }
 
@@ -578,6 +578,13 @@ body.debug .img-footer-accent {
   /* Show nav when toggled */
   #nav-menu.active {
     display: flex;
+  }
+}
+
+/* Mobile adjustment of overlay darkness */
+@media (max-width: 768px) {
+  .hero::before {
+    background: rgba(0, 0, 0, 0.4); /* lighter on mobile */
   }
 }
 
