@@ -254,26 +254,24 @@ header .contact-top a {
   justify-content: center;
 }
 
-/* Keep column layout but don’t force center on everything */
+/* Reset split sections back to original layout */
 .split > div {
-  flex: 1 1 45%;
-  min-width: 280px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
+  flex: 1 1 45%;           /* each side ~half */
+  min-width: 280px;        /* prevents collapsing too small */
+  text-align: left;        /* keep text left-aligned */
 }
 
-/* Images: responsive and consistent */
+/* Keep images responsive without forcing centering */
 .split > div img {
   width: 100%;
   height: auto;
   margin-bottom: 20px;
 }
 
-/* Buttons: centered below image */
+/* Center only the button */
 .split > div button {
-  align-self: center;   /* centers this item only */
-  margin-top: 20px;
+  display: block;
+  margin: 20px auto 0 auto;
 }
 
 .split h3 {
@@ -327,10 +325,12 @@ header .contact-top a {
   margin: 0 5px;
 }
 
-/* Reset align-left margin for carousel */
+/* Reset align-left effect for carousel */
 .align-left .carousel {
-  margin-left: 0;    /* undo parent offset */
-  margin-right: 0;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100%;
+  max-width: 1200px;  /* optional: control maximum width */
 }
 
 /* ================= CAROUSEL RESPONSIVE BEHAVIOR ================= */
