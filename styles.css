@@ -285,6 +285,10 @@ header .contact-top a {
   flex: 1 1 45%;           /* each side ~half */
   min-width: 280px;        /* prevents collapsing too small */
   text-align: left;        /* keep text left-aligned */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;   /* align to the top/left */
+  justify-content: flex-start;
 }
 
 /* Keep images responsive without forcing centering */
