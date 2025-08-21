@@ -471,8 +471,8 @@ body.debug .img-footer-accent {
   }
 
   /* Hide desktop contact info on mobile */
-  .contact-top {
-    display: none;
+  header .contact-top {
+    display: none !important;
   }
 
   /* Hide nav by default on mobile */
