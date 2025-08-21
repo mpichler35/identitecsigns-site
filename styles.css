@@ -117,6 +117,11 @@ header .contact-top a {
   text-decoration: none;
 }
 
+/* Prevent header overlap when using anchor navigation */
+section[id] {
+  scroll-margin-top: var(--header-height);
+}
+
 /* Hamburger menu default (hidden on desktop) */
 .hamburger {
   display: none;
