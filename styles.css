@@ -463,22 +463,23 @@ body.debug .img-footer-accent {
     flex-direction: column;
     text-align: center;
   }
+
   .carousel img {
     width: 80%;
   }
-}
 
-/* HAMBURGER + NAV RESPONSIVE */
-.hamburger {
-  display: none;                  /* hidden by default (desktop) */
-  font-size: 1.8rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--charcoal);
-}
+  /* Mobile hamburger visible */
+  .hamburger {
+    display: block;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--charcoal);
+    margin-left: auto; /* pushes it to right side of header */
+  }
 
-@media (max-width: 768px) {
+  /* Mobile nav hidden by default */
   nav {
     display: none;
     flex-direction: column;
@@ -490,7 +491,20 @@ body.debug .img-footer-accent {
     padding: 10px 0;
   }
 
+  /* Show nav when active */
   nav.active {
     display: flex;
+  }
+}
+
+/* Desktop overrides */
+@media (min-width: 769px) {
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+
+  .hamburger {
+    display: none;
   }
 }
