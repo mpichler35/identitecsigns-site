@@ -97,7 +97,48 @@ header .contact-top a {
   text-decoration: none;
 }
 
+/* Hamburger menu default (hidden on desktop) */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
+/* Mobile header adjustments */
+@media (max-width: 768px) {
+  header {
+    padding: 8px 16px;
+    flex-wrap: wrap;
+  }
+
+  .hamburger {
+    display: block;       /* show hamburger */
+    margin-left: auto;    /* push it right */
+  }
+
+  nav {
+    display: none;        /* hide nav by default */
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    gap: 10px;
+    background: white;    /* dropdown background */
+    border-top: 1px solid var(--light-gray);
+    padding: 10px 0;
+  }
+
+  nav.active {
+    display: flex;        /* show when toggled */
+  }
+
+  header .contact-top {
+    font-size: 0.8rem;
+    margin-top: 10px;
+    width: 100%;
+  }
+}
 
 /* ================= RESPONSIVE HEADER ================= */
 @media (max-width: 900px) {
