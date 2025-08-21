@@ -11,6 +11,7 @@
   --font-body: 'Merriweather', 'Times New Roman', serif;
 
   --header-height: 80px; /* updated dynamically by JS */
+  --align-left-offset: 40px; /* change this once, everything updates */
 }
 
 /* Add top padding equal to header so content is never hidden */
@@ -40,7 +41,7 @@ h3 { font-size: 1.5rem; }
 /* ================= UTILITY ================= */
 /* Align content with header logo */
 .align-left {
-  margin-left: 40px;    /* matches header padding on desktop */
+  margin-left: var(--align-left-offset);    /* matches header padding on desktop */
   text-align: left;
 }
 
@@ -279,8 +280,8 @@ header .contact-top a {
 }
 
 .split > div {
-  flex: 0 0 calc(50% - 20px);  /* equal halves even after margins */
-  max-width: calc(50% - 20px);
+  flex: 0 0 calc(50% - (var(--align-left-offset) / 2));  /* equal halves even after margins */
+  max-width: calc(50% - (50% - (var(--align-left-offset) / 2));
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
