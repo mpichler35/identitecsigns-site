@@ -358,6 +358,16 @@ footer * {
   z-index: 1;                       /* keeps text above overlay */
 }
 
+footer a {
+  color: var(--white);       /* white text, consistent with footer */
+  text-decoration: none;     /* remove underline */
+}
+
+footer a:hover {
+  color: var(--bronze);      /* subtle brand hover state */
+  text-decoration: underline; /* optional, keeps accessibility clear */
+}
+
 /* ================= DEBUG MODE ================= */
 body.debug .img-hero-main,
 body.debug .img-about-services,
