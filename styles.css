@@ -11,7 +11,6 @@
   --font-body: 'Merriweather', 'Times New Roman', serif;
 
   --header-height: 80px; /* updated dynamically by JS */
-  --align-left-offset: 40px; /* change this once, everything updates */
 }
 
 /* Add top padding equal to header so content is never hidden */
@@ -41,7 +40,7 @@ h3 { font-size: 1.5rem; }
 /* ================= UTILITY ================= */
 /* Align content with header logo */
 .align-left {
-  margin-left: var(--align-left-offset);    /* matches header padding on desktop */
+  margin-left: 40px;    /* matches header padding on desktop */
   text-align: left;
 }
 
@@ -280,23 +279,13 @@ header .contact-top a {
 }
 
 .split > div {
-  flex: 0 0 calc(50% - (var(--align-left-offset) / 2));  /* equal halves even after margins */
-  max-width: calc(50% - (50% - (var(--align-left-offset) / 2));
+  flex: 1 1 50%;
+  max-width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: flex-start;  /* stack from the top */
+  align-items: flex-start;      /* keep everything left-aligned */
   box-sizing: border-box;
-}
-
-/* balance out align-left: only apply inside split */
-.split > .align-left {
-  padding-left: 40px;  /* whatever your align-left offset is */
-}
-
-/* balance the *other* column so it's visually equal */
-.split > div:not(.align-left) {
-  padding-right: 40px;  /* equal counterbalance */
 }
 
 /* Keep images responsive without forcing centering */
@@ -308,14 +297,17 @@ header .contact-top a {
 
 /* Center only the button */
 .split > div button {
-  margin: 20px auto 0 auto; /* centers under image */
-  align-self: center;       /* ensure centering in flex column */
+  display: block;
+  margin: 20px auto 0 auto;
 }
 
 .split h3 {
   margin-bottom: 20px;
 }
-
+.split button {
+  align-self: center;   /* centers button horizontally in its column */
+  margin-top: auto;     /* pushes it to the bottom if you want them baseline-aligned */
+}
 
 /* ================= AUDIENCE SPLIT IMAGES ================= */
 .img-audience-developers,
