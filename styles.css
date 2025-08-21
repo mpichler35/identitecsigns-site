@@ -289,8 +289,8 @@ header .contact-top a {
 }
 
 /* Keep images responsive without forcing centering */
-.split > div img {
-  width: 100%;
+.split > div > img {
+  max-width: 100%;   /* stay responsive */
   height: auto;
   margin-bottom: 20px;
 }
