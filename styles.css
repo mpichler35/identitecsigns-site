@@ -479,13 +479,8 @@ body.debug .img-footer-accent {
 }
 
 @media (max-width: 768px) {
-  .hamburger {
-    display: block;               /* only show hamburger on mobile */
-    margin-left: auto;
-  }
-
   nav {
-    display: none;                /* hide nav links by default */
+    display: none;
     flex-direction: column;
     width: 100%;
     margin-top: 10px;
@@ -496,6 +491,6 @@ body.debug .img-footer-accent {
   }
 
   nav.active {
-    display: flex;                /* show when toggled */
+    display: flex;
   }
 }
