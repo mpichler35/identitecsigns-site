@@ -254,29 +254,30 @@ header .contact-top a {
   justify-content: center;
 }
 
+/* Keep column layout but don’t force center on everything */
 .split > div {
-  flex: 1 1 45%;           /* each side takes ~half */
-  min-width: 280px;        /* prevents collapsing too small */
-  text-align: left;        /* keep text left-aligned */
-
-  display: flex;           /* flex column */
+  flex: 1 1 45%;
+  min-width: 280px;
+  text-align: left;
+  display: flex;
   flex-direction: column;
-  align-items: center;     /* centers children like button */
 }
 
+/* Images: responsive and consistent */
 .split > div img {
-  width: 100%;             /* image fills full width of column */
-  max-width: 400px;        /* cap so they don’t get oversized */
-  height: auto;            /* keep proportions */
+  width: 100%;
+  height: auto;
   margin-bottom: 20px;
+}
+
+/* Buttons: centered below image */
+.split > div button {
+  align-self: center;   /* centers this item only */
+  margin-top: 20px;
 }
 
 .split h3 {
   margin-bottom: 20px;
-}
-
-.split > div button {
-  margin-top: 20px;
 }
 
 /* ================= AUDIENCE SPLIT IMAGES ================= */
@@ -324,6 +325,12 @@ header .contact-top a {
   max-height: 250px;      /* keeps them compact */
   border-radius: 6px;     /* optional: rounded corners */
   margin: 0 5px;
+}
+
+/* Reset align-left margin for carousel */
+.align-left .carousel {
+  margin-left: 0;    /* undo parent offset */
+  margin-right: 0;
 }
 
 /* ================= CAROUSEL RESPONSIVE BEHAVIOR ================= */
