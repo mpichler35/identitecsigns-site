@@ -460,45 +460,35 @@ body.debug .img-footer-accent {
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
-  /* Split sections stack vertically */
-  .split {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  /* Carousel images resize */
-  .carousel img {
-    width: 80%;
-  }
-
-  /* Show hamburger on mobile */
-   .hamburger {
+  /* Hamburger visible on mobile */
+  .hamburger {
     display: block;
-    background: var(--bronze);   /* brand color */
+    background: var(--bronze);
     color: white;
     padding: 8px 12px;
     border-radius: 4px;
-    z-index: 1100; /* keep above nav */
+    z-index: 1100;
   }
 
-/* Hide nav by default on mobile */
-#nav-menu {
-  display: none;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 10px;
-  gap: 10px;
-  background: white;
-  border-top: 1px solid var(--light-gray);
-  padding: 10px 0;
-}
-
-/* When active, nav shows */
-#nav-menu.active {
-  display: flex;
-}
-  
-.contact-top {
+  /* Hide desktop contact info on mobile */
+  .contact-top {
     display: none;
+  }
+
+  /* Hide nav by default on mobile */
+  #nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    gap: 10px;
+    background: white;
+    border-top: 1px solid var(--light-gray);
+    padding: 10px 0;
+  }
+
+  /* Show nav when toggled */
+  #nav-menu.active {
+    display: flex;
   }
 }
