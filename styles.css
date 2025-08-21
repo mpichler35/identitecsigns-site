@@ -61,6 +61,12 @@ h3 { font-size: 1.5rem; }
   height: auto;
 }
 
+/* Reset align-left margin for carousel */
+.align-left .carousel {
+  margin-left: 0;    /* undo parent offset */
+  margin-right: 0;
+}
+
 /* ================= CTA BUTTONS ================= */
 button, 
 .btn, 
@@ -86,11 +92,8 @@ header .contact-top button:hover {
   background: var(--deep-green);
   transform: translateY(-2px);
 }
-/* Center CTAs inside split sections */
-.split button {
-  display: block;
-  margin: 20px auto 0 auto;  /* top spacing + center horizontally */
-}
+
+
 
 /* ================= HEADER ================= */
 header {
@@ -259,6 +262,18 @@ header .contact-top a {
 
 .split h3 {
   margin-bottom: 20px;
+}
+
+/* Center CTAs under images in split sections */
+.split > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers children horizontally */
+  text-align: left;      /* keep text left-aligned */
+}
+
+.split > div button {
+  margin-top: 20px;
 }
 
 /* ================= AUDIENCE SPLIT IMAGES ================= */
