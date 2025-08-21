@@ -51,6 +51,16 @@ h3 { font-size: 1.5rem; }
   }
 }
 
+/* Reset images inside align-left sections */
+.align-left img {
+  margin-left: 0;         /* undo parent offset */
+  display: block;
+  margin-right: auto;
+  margin-left: auto;      /* center image */
+  max-width: 100%;        /* responsive */
+  height: auto;
+}
+
 /* ================= HEADER ================= */
 header {
   position: fixed;
