@@ -545,6 +545,41 @@ body.debug .img-footer-accent {
   position: relative;
 }
 
+/* ================= TESTIMONIALS ================= */
+#testimonials {
+  background: var(--light-gray);
+  padding: 60px 20px;
+}
+
+#testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--charcoal);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.testimonials-grid blockquote {
+  background: white;
+  padding: 20px 25px;
+  border-left: 6px solid var(--bronze);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  font-style: italic;
+  line-height: 1.5;
+  border-radius: 6px;
+}
+
+.testimonials-grid blockquote footer {
+  margin-top: 15px;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--deep-green);
+}
+
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
   /* Show hamburger button on mobile */
