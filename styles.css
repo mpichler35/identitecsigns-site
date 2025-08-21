@@ -279,7 +279,7 @@ header .contact-top button:hover {
   object-fit: cover;      /* crops to fit box */
   max-height: 250px;      /* keeps them compact */
   border-radius: 6px;     /* optional: rounded corners */
-  margin: 5px 5px;
+  margin: 0 5px;
 }
 
 /* ================= CAROUSEL RESPONSIVE BEHAVIOR ================= */
