@@ -55,7 +55,7 @@ header .logo a {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
-  color: var(--dark-orange);
+  color: var(--bronze);
   text-decoration: none;
 }
 
@@ -67,7 +67,7 @@ header nav {
 
 header nav a {
   font-weight: 600;
-  color: var(--dark-gray);
+  color: var(--charcoal);
   text-decoration: none;
 }
 
@@ -83,15 +83,7 @@ header .contact-top a {
   text-decoration: none;
 }
 
-header button {
-  background: var(--dark-orange);
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 600;
-}
+
 
 /* ================= RESPONSIVE HEADER ================= */
 @media (max-width: 900px) {
@@ -163,6 +155,7 @@ header button {
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;              /* small spacing from subline */
+  color: white;                     /* ensure hero headline is always white */
 }
 
 .hero p {
