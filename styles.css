@@ -310,8 +310,7 @@ header .contact-top button:hover {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
-  margin: 0;              /* removes auto-centering */
-  margin-right: 40px;    
+  margin: 0;              /* removes auto-centering */  
   border-radius: 6px;
 }
 
@@ -320,8 +319,6 @@ header .contact-top button:hover {
     max-width: 100%;
     aspect-ratio: 16 / 9;
     margin: 0 auto;       /* recenter on small screens */
-    margin-right: 40px;
-    margin-left: 40px;
   }
 }
 
@@ -332,7 +329,6 @@ header .contact-top button:hover {
   height: auto;
   margin-left: 0;       /* flush left */
   margin-right: auto;   /* prevent centering */
-  margin-right: 40px;    
 }
 
 /* ================= SPLIT SECTIONS ================= */
