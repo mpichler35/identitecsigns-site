@@ -233,7 +233,7 @@ header .contact-top a {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
-  margin: 0 auto;
+  margin: 0;              /* removes auto-centering */
   border-radius: 6px;
 }
 
@@ -241,6 +241,7 @@ header .contact-top a {
   .img-about-services {
     max-width: 100%;
     aspect-ratio: 16 / 9;
+    margin: 0 auto;       /* recenter on small screens */
   }
 }
 
