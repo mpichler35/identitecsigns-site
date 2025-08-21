@@ -498,8 +498,7 @@ body.debug .img-footer-accent {
   display: flex;
 }
   
-  /* Hide contact-top on mobile for cleaner header */
-  .contact-top {
+.contact-top {
     display: none;
   }
 }
