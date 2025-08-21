@@ -39,42 +39,31 @@ h2 { font-size: 2rem; }
 h3 { font-size: 1.5rem; }
 
 /* ================= UTILITY ================= */
-/* Align content text with header logo */
+/* Align content under logo without shifting section background */
 .align-left {
+  margin-left: var(--align-left-offset); /* content offset only */
   text-align: left;
-  margin-left: 0; /* don't shift the whole container */
+  display: inline-block; /* ensures it doesn’t move the whole block bg */
 }
 
-/* Offset only text elements inside */
-.align-left h1,
-.align-left h2,
-.align-left h3,
-.align-left p,
-.align-left ul {
-  margin-left: var(--align-left-offset); /* match header padding */
-}
-
-/* Responsive adjustment */
+/* Mobile adjustment */
 @media (max-width: 768px) {
-  .align-left h1,
-  .align-left h2,
-  .align-left h3,
-  .align-left p,
-  .align-left ul {
-    margin-left: 20px; /* match mobile header padding */
+  .align-left {
+    margin-left: 20px;
   }
 }
 
-/* Reset images inside align-left (center them by default) */
+/* Reset images inside align-left so they stay centered */
 .align-left img {
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
+  margin-left: auto; /* center */
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-/* Reset carousel inside align-left */
+/* Reset for carousel specifically */
 .align-left .carousel {
   margin-left: 0;
   margin-right: 0;
