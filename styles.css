@@ -406,7 +406,7 @@ header .contact-top button:hover {
 
 .carousel button {
   display: block;
-  margin: 20px auto 40px auto; /* top 20px, bottom 20px */
+  margin: 20px auto 20px auto; /* top 20px, bottom 20px */
 }
 
 /* ================= CAROUSEL RESPONSIVE BEHAVIOR ================= */
