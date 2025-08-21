@@ -350,13 +350,14 @@ header .contact-top button:hover {
 }
 
 .carousel img {
-  flex: 0 0 auto;         /* don’t shrink, stay side-by-side */
-  width: 25%;             /* 4 visible at a time on desktop */
-  aspect-ratio: 4 / 3;    /* consistent frame */
-  object-fit: cover;      /* crops to fit box */
-  max-height: 250px;      /* keeps them compact */
-  border-radius: 6px;     /* optional: rounded corners */
-  margin: 0 5px;
+  height: auto;              /* let height scale */
+  width: auto;               /* don’t stretch full width */
+  aspect-ratio: 3 / 4;       /* enforce portrait ratio */
+  max-height: 400px;         /* cap size on desktop */
+  object-fit: cover;         /* crop to fill ratio */
+  flex: 0 0 auto;            /* don’t shrink */
+  border-radius: 6px;        /* polish */
+  margin: 0 10px;            /* spacing between images */
 }
 
 /* ================= CAROUSEL RESPONSIVE BEHAVIOR ================= */
