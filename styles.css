@@ -460,6 +460,10 @@ footer a:hover {
   text-decoration: underline; /* optional, keeps accessibility clear */
 }
 
+footer h3 {
+  color: white;               /* ensure hero headline is always white */
+}
+
 /* ================= DEBUG MODE ================= */
 body.debug .img-hero-main,
 body.debug .img-about-services,
