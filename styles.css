@@ -460,7 +460,7 @@ body.debug .img-footer-accent {
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
-  /* Hamburger visible on mobile */
+  /* Show hamburger button on mobile */
   .hamburger {
     display: block;
     background: var(--bronze);
