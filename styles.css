@@ -505,7 +505,7 @@ footer a:hover {
   }
 }
 
-/* Make sure links don’t look like blue hyperlinks */
+/* Ensure links don’t look like default hyperlinks */
 .footer-contact a.plain-link {
   color: inherit;
   text-decoration: none;
