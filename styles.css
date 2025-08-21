@@ -283,7 +283,7 @@ header .contact-top a {
 
 /* Reset split sections back to original layout */
 .split > div {
-  flex: 1 1 45%;           /* each side ~half */
+  flex: 0 0 45%;           /* each side ~half */
   max-width: 50%;          /* stops one from getting bigger */
   min-width: 280px;        /* prevents collapsing too small */
   text-align: left;        /* keep text left-aligned */
@@ -291,6 +291,7 @@ header .contact-top a {
   flex-direction: column;
   align-items: flex-start;   /* align to the top/left */
   justify-content: flex-start;
+  box-sizing: border-box;
 }
 
 /* Keep images responsive without forcing centering */
