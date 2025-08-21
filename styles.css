@@ -475,23 +475,23 @@ body.debug .img-footer-accent {
     display: block;        /* show the hamburger */
   }
 
-  /* Hide nav by default on mobile */
-  nav {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-    gap: 10px;
-    background: white;
-    border-top: 1px solid var(--light-gray);
-    padding: 10px 0;
-  }
+/* Hide nav by default on mobile */
+#nav-menu {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 10px;
+  gap: 10px;
+  background: white;
+  border-top: 1px solid var(--light-gray);
+  padding: 10px 0;
+}
 
-  /* When active, nav shows */
-  nav.active {
-    display: flex;
-  }
-
+/* When active, nav shows */
+#nav-menu.active {
+  display: flex;
+}
+  
   /* Hide contact-top on mobile for cleaner header */
   .contact-top {
     display: none;
