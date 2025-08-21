@@ -314,7 +314,7 @@ header .contact-top a {
 .img-audience-hoas {
   width: 100%;             /* fill parent column */
   max-width: 400px;        /* cap on desktop */
-  aspect-ratio: 4 / 3;     /* consistent box ratio */
+  aspect-ratio: 3 / 2;   /* match native ratio */
   object-fit: cover;       /* crops evenly */
   display: block;
   margin: 0 auto 20px;     /* centered with space below */
