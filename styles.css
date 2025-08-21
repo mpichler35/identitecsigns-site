@@ -370,8 +370,8 @@ header .contact-top button:hover {
 }
 
 .carousel img {
-  height: auto;              /* let height scale */
-  width: auto;               /* don’t stretch full width */
+  width: 250px;         /* adjust size */
+  height: auto;
   aspect-ratio: 4 / 3;       /* enforce portrait ratio */
   max-height: 400px;         /* cap size on desktop */
   object-fit: cover;         /* crop to fill ratio */
