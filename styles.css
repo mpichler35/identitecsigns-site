@@ -51,50 +51,6 @@ h3 { font-size: 1.5rem; }
   }
 }
 
-/* Reset images inside align-left sections */
-.align-left img {
-  margin-left: 0;         /* undo parent offset */
-  display: block;
-  margin-right: auto;
-  margin-left: auto;      /* center image */
-  max-width: 100%;        /* responsive */
-  height: auto;
-}
-
-/* Reset align-left margin for carousel */
-.align-left .carousel {
-  margin-left: 0;    /* undo parent offset */
-  margin-right: 0;
-}
-
-/* ================= CTA BUTTONS ================= */
-button, 
-.btn, 
-header .contact-top button {
-  display: inline-block;
-  background: var(--bronze);
-  color: white;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: var(--font-header);
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  text-align: center;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-button:hover, 
-.btn:hover,
-header .contact-top button:hover {
-  background: var(--deep-green);
-  transform: translateY(-2px);
-}
-
-
-
 /* ================= HEADER ================= */
 header {
   position: fixed;
@@ -140,6 +96,8 @@ header .contact-top a {
   color: var(--dark-gray);
   text-decoration: none;
 }
+
+
 
 /* ================= RESPONSIVE HEADER ================= */
 @media (max-width: 900px) {
@@ -224,7 +182,31 @@ header .contact-top a {
   color: white;   /* force white for readability */
 }
 
+/* ================= CTA BUTTONS ================= */
+button, 
+.btn, 
+header .contact-top button {
+  display: inline-block;
+  background: var(--bronze);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-header);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
 
+button:hover, 
+.btn:hover,
+header .contact-top button:hover {
+  background: var(--deep-green);
+  transform: translateY(-2px);
+}
 
 /* ================= ABOUT / SERVICES IMAGE ================= */
 .img-about-services {
@@ -254,24 +236,10 @@ header .contact-top a {
   justify-content: center;
 }
 
-/* Reset split sections back to original layout */
 .split > div {
-  flex: 1 1 45%;           /* each side ~half */
+  flex: 1 1 45%;           /* each side takes ~half */
   min-width: 280px;        /* prevents collapsing too small */
-  text-align: left;        /* keep text left-aligned */
-}
-
-/* Keep images responsive without forcing centering */
-.split > div img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-/* Center only the button */
-.split > div button {
-  display: block;
-  margin: 20px auto 0 auto;
+  text-align: left;
 }
 
 .split h3 {
@@ -323,14 +291,6 @@ header .contact-top a {
   max-height: 250px;      /* keeps them compact */
   border-radius: 6px;     /* optional: rounded corners */
   margin: 0 5px;
-}
-
-/* Reset align-left effect for carousel */
-.align-left .carousel {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  width: 100%;
-  max-width: 1200px;  /* optional: control maximum width */
 }
 
 /* ================= CAROUSEL RESPONSIVE BEHAVIOR ================= */
