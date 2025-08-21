@@ -39,31 +39,42 @@ h2 { font-size: 2rem; }
 h3 { font-size: 1.5rem; }
 
 /* ================= UTILITY ================= */
-/* Align content under logo without shifting section background */
+/* Align content text with header logo */
 .align-left {
-  margin-left: var(--align-left-offset); /* content offset only */
   text-align: left;
-  display: inline-block; /* ensures it doesn’t move the whole block bg */
+  margin-left: 0; /* don't shift the whole container */
 }
 
-/* Mobile adjustment */
+/* Offset only text elements inside */
+.align-left h1,
+.align-left h2,
+.align-left h3,
+.align-left p,
+.align-left ul {
+  margin-left: var(--align-left-offset); /* match header padding */
+}
+
+/* Responsive adjustment */
 @media (max-width: 768px) {
-  .align-left {
-    margin-left: 20px;
+  .align-left h1,
+  .align-left h2,
+  .align-left h3,
+  .align-left p,
+  .align-left ul {
+    margin-left: 20px; /* match mobile header padding */
   }
 }
 
-/* Reset images inside align-left so they stay centered */
+/* Reset images inside align-left (center them by default) */
 .align-left img {
-  margin-left: 0;
+  margin-left: auto;
   margin-right: auto;
-  margin-left: auto; /* center */
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-/* Reset for carousel specifically */
+/* Reset carousel inside align-left */
 .align-left .carousel {
   margin-left: 0;
   margin-right: 0;
