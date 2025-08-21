@@ -244,6 +244,15 @@ header .contact-top a {
   }
 }
 
+/* About Us / Our Services image alignment */
+#about img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: 0;       /* flush left */
+  margin-right: auto;   /* prevent centering */
+}
+
 /* ================= SPLIT SECTIONS ================= */
 .split {
   display: flex;
