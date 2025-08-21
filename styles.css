@@ -470,9 +470,10 @@ body.debug .img-footer-accent {
     z-index: 1100;
   }
 
-  /* Hide desktop contact info on mobile */
+  /* Hide desktop contact info completely on mobile */
   header .contact-top {
     display: none !important;
+    visibility: hidden !important;
   }
 
   /* Hide nav by default on mobile */
