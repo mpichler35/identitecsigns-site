@@ -211,6 +211,17 @@
     const nav = document.getElementById("nav-menu");
     nav.classList.toggle("active");
   }
+
+  // Close menu when a nav link is clicked
+  document.addEventListener("DOMContentLoaded", () => {
+    const nav = document.getElementById("nav-menu");
+    const links = nav.querySelectorAll("a");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("active");
+      });
+    });
+  });
 </script>
 </body>
 </html>
