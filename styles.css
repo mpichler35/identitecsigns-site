@@ -233,7 +233,6 @@ header .contact-top button:hover {
 
 .split h3 {
   margin-bottom: 20px;
-  margin-left: 10px;
 }
 
 /* ================= AUDIENCE SPLIT IMAGES ================= */
@@ -276,11 +275,11 @@ header .contact-top button:hover {
 .carousel img {
   flex: 0 0 auto;         /* don’t shrink, stay side-by-side */
   width: 25%;             /* 4 visible at a time on desktop */
-  aspect-ratio: 3 / 4;    /* consistent frame */
+  aspect-ratio: 4 / 3;    /* consistent frame */
   object-fit: cover;      /* crops to fit box */
   max-height: 250px;      /* keeps them compact */
   border-radius: 6px;     /* optional: rounded corners */
-  margin: 0 5px;
+  margin: 5px 5px;
 }
 
 /* ================= CAROUSEL RESPONSIVE BEHAVIOR ================= */
