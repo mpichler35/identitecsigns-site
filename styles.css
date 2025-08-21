@@ -351,6 +351,12 @@ header .contact-top button:hover {
   margin-bottom: 20px;
 }
 
+/* Center buttons under images in split sections */
+.split > div button {
+  display: block;
+  margin: 20px auto 0 auto; /* center horizontally */
+}
+
 /* ================= AUDIENCE SPLIT IMAGES ================= */
 .img-audience-developers,
 .img-audience-hoas {
