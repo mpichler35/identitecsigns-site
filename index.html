@@ -132,7 +132,38 @@
     <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Start your project</button>
   </div>
 </section>
+  
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightboxImg">
+</div>
 
+  <script>
+  // Lightbox functionality
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const closeBtn = document.querySelector('.lightbox .close');
+
+  document.querySelectorAll('#carouselTrack img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+</script>
+  
  <!-- ================= TESTIMONIALS ================= -->
   <section id="testimonials" class="align-left">
     <h2>What Our Clients Say</h2>
@@ -219,34 +250,28 @@
   </script>
   
 <script>
-  // Carousel script
   const track = document.getElementById("carouselTrack");
-  const slides = track.children.length;
-  const clone = track.innerHTML; 
-  track.innerHTML += clone; // duplicate all slides once for looping
-  
-  let index = 0;
-  const totalSlides = track.children.length; // now 24 (12 original + 12 clone)
 
-  function moveCarousel() {
-    index++;
-    track.style.transform = `translateX(-${index * 25}%)`; // 25% = 4 visible at once
+  // Duplicate slides to make it seamless
+  track.innerHTML += track.innerHTML;
 
-    // reset after original set ends
-    if (index >= slides) {
-      setTimeout(() => {
-        track.style.transition = "none";
-        index = 0;
-        track.style.transform = `translateX(0)`;
-        // re-enable transition
-        setTimeout(() => {
-          track.style.transition = "transform 0.8s ease";
-        }, 50);
-      }, 800); // wait for the transition to finish
+  let scrollAmount = 0;
+
+  function autoScroll() {
+    scrollAmount += 1; // pixels per tick
+    track.style.transform = `translateX(-${scrollAmount}px)`;
+
+    // Reset when we've scrolled halfway (since we doubled the content)
+    if (scrollAmount >= track.scrollWidth / 2) {
+      scrollAmount = 0;
+      track.style.transform = `translateX(0)`;
     }
+
+    requestAnimationFrame(autoScroll);
   }
 
-  setInterval(moveCarousel, 3000);
+  // kick it off
+  autoScroll();
 </script>
 <script>
   function toggleMenu() {
